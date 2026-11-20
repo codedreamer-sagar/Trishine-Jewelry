@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#032D23">
+  <title>My Account | TRISHINE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/search.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/animation.css"><link rel="stylesheet" href="css/account.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="account-page">
+  <section class="announcement-bar"><div class="announcement-tracker"><div class="announcement-content">✨ Free Shipping Above ₹1999 <span>•</span> BIS Hallmarked Jewellery <span>•</span> 7 Days Easy Return <span>•</span> Secure Payment <span>•</span> Cash On Delivery <span>•</span> Luxury That Feels Yours.</div></div></section>
+  <nav class="navbar">
+    <div class="logo"><a href="index.html"><img src="images/logo/trishine-logo1.png" alt="TRISHINE Logo"><div class="brand-text"><h2>TRISHINE</h2><p>Luxury That Feels Yours.</p></div></a></div>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="shop.html">Shop</a></li><li><a href="collections.html">Collections</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <div class="nav-icons"><a href="#" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a><a href="wishlist.html" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></a><a href="cart.html" aria-label="Cart"><i class="fa-solid fa-cart-shopping"></i></a><a href="login.html" class="active" aria-label="My account"><i class="fa-regular fa-user"></i></a></div>
+    <div class="menu-btn"><i class="fa-solid fa-bars"></i></div>
+  </nav>
+
+  <main class="account-main">
+    <header class="account-welcome"><div><p class="account-kicker">THE TRISHINE CLUB</p><h1 id="welcome-title">Your account, your way.</h1><p id="welcome-copy">Sign in to see your orders, manage your profile and save your favourites.</p></div><span class="welcome-gem"><i class="fa-regular fa-gem"></i></span></header>
+    <section class="account-dashboard" id="account-dashboard" hidden>
+      <aside class="account-sidebar">
+        <div class="account-identity"><div class="identity-avatar" id="identity-avatar">T</div><div><small>WELCOME BACK</small><strong id="identity-name">TRISHINE MEMBER</strong><span id="identity-email"></span></div></div>
+        <button type="button" class="account-side-link active" data-panel="overview"><i class="fa-regular fa-user"></i> My account</button>
+        <button type="button" class="account-side-link" data-panel="orders"><i class="fa-solid fa-box-open"></i> My orders</button>
+        <a class="account-side-link" href="wishlist.html"><i class="fa-regular fa-heart"></i> My wishlist</a>
+        <button type="button" class="account-side-link" data-panel="help"><i class="fa-regular fa-comments"></i> Help & support</button>
+        <button type="button" class="account-side-link" data-panel="wallet"><i class="fa-solid fa-wallet"></i> Payment wallet</button>
+        <button type="button" class="account-side-link" data-panel="security"><i class="fa-solid fa-shield-halved"></i> Privacy & security</button>
+        <button type="button" class="account-side-link signout-link" id="logout-button"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log out</button>
+      </aside>
+      <div class="account-content">
+        <section class="account-panel active" id="panel-overview">
+          <div class="panel-heading"><div><p class="account-kicker">YOUR SPACE</p><h2>Account overview</h2></div><span class="member-pill"><i class="fa-solid fa-sparkles"></i> TRISHINE MEMBER</span></div>
+          <div class="overview-grid">
+            <article class="account-card profile-card"><div class="card-top"><span class="card-icon"><i class="fa-regular fa-id-card"></i></span><button type="button" class="text-button" data-open-modal="profile-modal">Edit profile</button></div><h3>Personal details</h3><div class="detail-row"><span>Name</span><strong id="profile-name"></strong></div><div class="detail-row"><span>Email</span><strong id="profile-email"></strong></div><div class="detail-row"><span>Phone</span><strong id="profile-phone">Add a phone number</strong></div></article>
+            <article class="account-card"><div class="card-top"><span class="card-icon"><i class="fa-solid fa-location-dot"></i></span><button type="button" class="text-button" data-open-modal="address-modal">Edit address</button></div><h3>Saved address</h3><p id="saved-address" class="address-display">Add an address for a smoother checkout.</p></article>
+            <article class="account-card mini-card"><div class="card-top"><span class="card-icon"><i class="fa-solid fa-box-open"></i></span><a class="text-button" href="#" data-go-panel="orders">View orders</a></div><h3>Your orders</h3><p id="order-summary-text">Your placed orders will appear here.</p></article>
+            <article class="account-card mini-card"><div class="card-top"><span class="card-icon"><i class="fa-solid fa-wallet"></i></span><span class="wallet-balance">₹0</span></div><h3>Payment wallet</h3><p>Wallet balance and payment methods.</p><button class="text-button" type="button" data-go-panel="wallet">Manage wallet</button></article>
+          </div>
+          <div class="account-preferences account-card"><div><span class="card-icon"><i class="fa-solid fa-globe"></i></span><div><h3>Language</h3><p>Choose your preferred language.</p></div></div><label class="visually-hidden" for="language-select">Preferred language</label><select id="language-select"><option value="English">English</option><option value="हिन्दी">हिन्दी</option><option value="বাংলা">বাংলা</option><option value="தமிழ்">தமிழ்</option></select></div>
+          <div class="account-links"><a href="#faq"><i class="fa-regular fa-circle-question"></i> FAQ</a><a href="#terms"><i class="fa-solid fa-file-contract"></i> Terms & conditions</a><div class="social-follow"><span>Follow us</span><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></div></div>
+        </section>
+        <section class="account-panel" id="panel-orders"><div class="panel-heading"><div><p class="account-kicker">YOUR PURCHASES</p><h2>My orders</h2></div></div><div id="orders-list" class="empty-account-state"><i class="fa-solid fa-box-open"></i><h3>No orders yet</h3><p>When you place an order, its details and status will show up here.</p><a class="gold-button" href="shop.html">Explore jewellery</a></div></section>
+        <section class="account-panel" id="panel-wallet"><div class="panel-heading"><div><p class="account-kicker">PAYMENT WALLET</p><h2>Your wallet</h2></div></div><div class="wallet-card"><span>AVAILABLE BALANCE</span><strong>₹0</strong><p>Your TRISHINE wallet balance will appear here.</p></div><div class="account-card wallet-info"><h3>Payment methods</h3><p>Payment methods are securely collected during checkout.</p></div></section>
+        <section class="account-panel" id="panel-security"><div class="panel-heading"><div><p class="account-kicker">YOUR PRIVACY</p><h2>Privacy & security</h2></div></div><article class="account-card security-card"><i class="fa-solid fa-shield-halved"></i><div><h3>Keep your account details up to date</h3><p>This storefront saves demo account details in this browser. It does not connect to a secure sign-in service yet.</p></div></article><a class="account-policy-link" href="#terms">Read terms & privacy information <i class="fa-solid fa-arrow-right"></i></a></section>
+        <section class="account-panel" id="panel-help"><div class="panel-heading"><div><p class="account-kicker">WE ARE HERE FOR YOU</p><h2>Help & support</h2></div></div><div class="help-card"><div class="help-icon"><i class="fa-regular fa-comments"></i></div><div><h3>Need a hand?</h3><p>Start a chat and leave a message for the TRISHINE support team.</p><button class="gold-button" type="button" id="open-chat">Chat with support <i class="fa-solid fa-arrow-right"></i></button></div></div><p class="support-contact">You can also reach us from the <a href="contact.html">Contact page</a>.</p></section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="account-footer"><p>© 2026 <strong>TRISHINE</strong>. Luxury That Feels Yours.</p><a href="contact.html">Need help? Contact us</a></footer>
+
+  <div class="auth-backdrop" id="auth-backdrop" hidden>
+    <section class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+      <div class="auth-brand"><img src="images/logo/trishine-logo1.png" alt=""><span>TRISHINE</span></div>
+      <p class="account-kicker">WELCOME TO THE TRISHINE CLUB</p><h2 id="auth-title">A little more sparkle.</h2><p class="auth-copy">Sign in or create an account to keep your favourites close.</p>
+      <div class="auth-tabs" role="tablist"><button type="button" class="auth-tab active" role="tab" aria-selected="true" data-auth-tab="login">Log in</button><button type="button" class="auth-tab" role="tab" aria-selected="false" data-auth-tab="signup">Sign up</button></div>
+      <form class="auth-form active" id="login-form" autocomplete="on"><label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label><label>Password<input name="password" type="password" autocomplete="current-password" required minlength="6" placeholder="Your password"></label><p class="form-error" id="login-error" role="alert"></p><button class="gold-button auth-submit" type="submit">Log in <i class="fa-solid fa-arrow-right"></i></button></form>
+      <form class="auth-form" id="signup-form" autocomplete="on" hidden><label>Your name<input name="name" type="text" autocomplete="name" required maxlength="60" placeholder="Full name"></label><label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label><label>Create a password<input name="password" type="password" autocomplete="new-password" required minlength="6" placeholder="At least 6 characters"></label><p class="form-error" id="signup-error" role="alert"></p><button class="gold-button auth-submit" type="submit">Create account <i class="fa-solid fa-arrow-right"></i></button></form>
+      <p class="auth-legal">Demo account data is saved in this browser only. Do not use a password you use elsewhere.</p>
+    </section>
+  </div>
+
+  <div class="simple-modal-backdrop" id="profile-modal" hidden><form class="simple-modal" id="profile-form"><button class="modal-close" type="button" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button><p class="account-kicker">YOUR DETAILS</p><h2>Edit profile</h2><label>Full name<input name="name" required maxlength="60"></label><label>Email address<input name="email" type="email" required></label><label>Phone number<input name="phone" type="tel" autocomplete="tel"></label><button class="gold-button" type="submit">Save profile</button></form></div>
+  <div class="simple-modal-backdrop" id="address-modal" hidden><form class="simple-modal" id="address-form"><button class="modal-close" type="button" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button><p class="account-kicker">DELIVERY DETAILS</p><h2>Edit address</h2><label>Address<input name="line" autocomplete="street-address" required></label><div class="form-two-col"><label>City<input name="city" autocomplete="address-level2" required></label><label>PIN code<input name="pin" inputmode="numeric" autocomplete="postal-code" required></label></div><label>State<input name="state" autocomplete="address-level1" required></label><button class="gold-button" type="submit">Save address</button></form></div>
+  <div class="simple-modal-backdrop" id="info-modal" hidden><section class="simple-modal info-modal" role="dialog" aria-modal="true"><button class="modal-close" type="button" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button><p class="account-kicker">TRISHINE</p><h2 id="info-title">Information</h2><div id="info-content"></div></section></div>
+  <aside class="support-chat" id="support-chat" aria-label="TRISHINE support chat" hidden><div class="chat-header"><div><i class="fa-regular fa-comments"></i><span><strong>TRISHINE Support</strong><small>Leave us a message</small></span></div><button type="button" id="close-chat" aria-label="Close chat"><i class="fa-solid fa-xmark"></i></button></div><div class="chat-messages" id="chat-messages" aria-live="polite"><div class="support-message">Hello! Tell us how we can help. A support team connection is not set up yet, so please include your contact details if you would like a reply.</div></div><form id="chat-form"><label class="visually-hidden" for="chat-input">Your message</label><input id="chat-input" required maxlength="500" placeholder="Write a message…"><button type="submit" aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button></form><a class="chat-contact-link" href="contact.html">Contact us for a reply</a></aside>
+
+  <script src="js/account.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>
+
+

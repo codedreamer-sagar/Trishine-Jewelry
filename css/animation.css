@@ -1,0 +1,9152 @@
+/*==============================
+Announcement Scroll Animation
+===============================*/
+
+.announcement-tracker{
+
+    animation:scrollAnnouncement 28s linear infinite;
+
+}
+
+.announcement-bar:hover .announcement-tracker{
+
+    animation-play-state:paused;
+
+}
+
+@keyframes scrollAnnouncement{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    100%{
+
+        transform:translateX(-50%);
+
+    }
+
+}
+/*=================================
+        Fade Up Animation
+=================================*/
+
+.fade-up{
+
+    animation:fadeUp 1.2s ease forwards;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(70px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=================================
+    Floating Jewellery
+=================================*/
+
+.floating-image{
+
+    animation:floatImage 5s ease-in-out infinite;
+
+}
+
+@keyframes floatImage{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-25px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=================================
+      Button Glow
+=================================*/
+
+.btn-primary{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.btn-primary:hover{
+
+    box-shadow:
+
+    0 0 20px rgba(212,175,55,.6),
+
+    0 0 50px rgba(212,175,55,.4);
+
+}
+
+/*=================================
+      Shine Effect
+=================================*/
+
+.shine::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:50%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.7),
+
+    transparent);
+
+    transform:skewX(-25deg);
+
+}
+
+.shine:hover::before{
+
+    animation:shine .8s;
+
+}
+
+@keyframes shine{
+
+    100%{
+
+        left:150%;
+
+    }
+
+}
+
+/*=================================
+     Sparkle Particles
+=================================*/
+
+/*==================================
+      LUXURY SPARKLES
+===================================*/
+
+.sparkles{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+.sparkle{
+
+    position:absolute;
+
+    color:#F7E7A0;
+
+    font-size:18px;
+
+    opacity:.3;
+
+    text-shadow:
+        0 0 8px rgba(212,175,55,.8),
+        0 0 20px rgba(212,175,55,.6);
+
+    animation:twinkle 4s ease-in-out infinite;
+
+}
+
+/* Individual Positions */
+
+.s1{top:5%;left:8%;animation-delay:.2s;}
+.s2{top:10%;left:22%;animation-delay:1s;}
+.s3{top:7%;left:45%;animation-delay:2s;}
+.s4{top:12%;left:70%;animation-delay:3s;}
+.s5{top:8%;left:90%;animation-delay:.6s;}
+
+.s6{top:25%;left:5%;animation-delay:1.2s;}
+.s7{top:30%;left:18%;animation-delay:2.8s;}
+.s8{top:35%;left:35%;animation-delay:1.8s;}
+.s9{top:28%;left:55%;animation-delay:.5s;}
+.s10{top:32%;left:82%;animation-delay:2.2s;}
+
+.s11{top:48%;left:10%;animation-delay:3.5s;}
+.s12{top:52%;left:28%;animation-delay:.8s;}
+.s13{top:45%;left:50%;animation-delay:1.7s;}
+.s14{top:55%;left:72%;animation-delay:2.5s;}
+.s15{top:50%;left:92%;animation-delay:.3s;}
+@keyframes twinkle{
+    0%{
+        transform:scale(.5) rotate(0deg);
+        opacity:.2;
+    }
+
+    25%{
+        opacity:.8;
+    }
+
+    50%{
+        transform:scale(1.4) rotate(180deg);
+        opacity:1;
+    }
+
+    75%{
+        opacity:.7;
+    }
+
+    100%{
+        transform:scale(.5) rotate(360deg);
+        opacity:.2;
+    }
+
+}
+
+/*=================================
+    Scroll Indicator
+=================================*/
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:25px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    text-align:center;
+
+    color:#F7E7A0;
+
+    animation:fadeUp 1.5s;
+
+}
+
+.mouse{
+
+    width:28px;
+
+    height:48px;
+
+    border:2px solid #D4AF37;
+
+    border-radius:20px;
+
+    margin:auto;
+
+    position:relative;
+
+}
+
+.mouse span{
+
+    width:5px;
+
+    height:10px;
+
+    background:#D4AF37;
+
+    position:absolute;
+
+    top:8px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    border-radius:10px;
+
+    animation:scrollMouse 1.6s infinite;
+
+}
+
+@keyframes scrollMouse{
+
+    0%{
+
+        top:8px;
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        top:28px;
+
+        opacity:0;
+
+    }
+
+}
+
+.scroll-indicator p{
+
+    margin-top:10px;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+}
+
+/*==================================
+        GOLDEN HALO
+===================================*/
+
+.hero-image{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* Rotating Golden Ring */
+
+.gold-ring{
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(212,175,55,.25);
+
+    animation:rotateRing 20s linear infinite;
+
+}
+
+.gold-ring::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:20px;
+
+    border-radius:50%;
+
+    border:2px dashed rgba(247,231,160,.3);
+
+}
+
+@keyframes rotateRing{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+/*==================================================
+            NEW ARRIVALS ANIMATIONS
+==================================================*/
+
+/*==================================
+        CARD REVEAL ANIMATION
+===================================*/
+
+.arrival-card{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    animation:cardReveal .8s ease forwards;
+
+}
+
+.arrival-card:nth-child(1){
+
+    animation-delay:.2s;
+
+}
+
+.arrival-card:nth-child(2){
+
+    animation-delay:.4s;
+
+}
+
+.arrival-card:nth-child(3){
+
+    animation-delay:.6s;
+
+}
+
+.arrival-card:nth-child(4){
+
+    animation-delay:.8s;
+
+}
+
+@keyframes cardReveal{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(80px);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================
+        FLOATING CARD
+===================================*/
+
+.arrival-card{
+
+    animation:
+        cardReveal .8s ease forwards,
+        floatingCard 6s ease-in-out infinite;
+
+}
+
+.arrival-card:nth-child(2){
+
+    animation-delay:
+        .4s,
+        .4s;
+
+}
+
+.arrival-card:nth-child(3){
+
+    animation-delay:
+        .6s,
+        .6s;
+
+}
+
+.arrival-card:nth-child(4){
+
+    animation-delay:
+        .8s,
+        .8s;
+
+}
+
+@keyframes floatingCard{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/*==================================
+        IMAGE FLOAT
+===================================*/
+
+.product-image img{
+
+    animation:imageFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes imageFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================
+        PRODUCT GLOW
+===================================*/
+
+.arrival-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:25px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        transparent,
+        rgba(212,175,55,.3),
+        transparent
+    );
+
+    opacity:0;
+
+    transition:.5s;
+
+    pointer-events:none;
+
+}
+
+.arrival-card:hover::before{
+
+    opacity:1;
+
+}
+
+/*==================================
+        GOLDEN BORDER SHINE
+===================================*/
+
+.arrival-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-150%;
+
+    left:-150%;
+
+    width:300%;
+
+    height:300%;
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.18),
+
+        transparent
+
+    );
+
+    transform:rotate(25deg);
+
+    transition:.8s;
+
+    opacity:0;
+
+}
+
+.arrival-card:hover::after{
+
+    top:100%;
+
+    left:100%;
+
+    opacity:1;
+
+}
+
+/*==================================
+        ICON ANIMATION
+===================================*/
+
+.product-icons a{
+
+    transform:scale(.8);
+
+    opacity:0;
+
+}
+
+.arrival-card:hover .product-icons a{
+
+    animation:iconPop .4s ease forwards;
+
+}
+
+.product-icons a:nth-child(1){
+
+    animation-delay:.1s;
+
+}
+
+.product-icons a:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.product-icons a:nth-child(3){
+
+    animation-delay:.3s;
+
+}
+
+@keyframes iconPop{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.5);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*==================================
+        HEART PULSE
+===================================*/
+
+.product-icons a:first-child:hover{
+
+    animation:heartBeat .6s ease infinite;
+
+}
+
+@keyframes heartBeat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    25%{
+
+        transform:scale(1.2);
+
+    }
+
+    50%{
+
+        transform:scale(.95);
+
+    }
+
+    75%{
+
+        transform:scale(1.15);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*==================================
+        PRICE GLOW
+===================================*/
+
+.arrival-card:hover .new-price{
+
+    animation:priceGlow 1.2s infinite alternate;
+
+}
+
+@keyframes priceGlow{
+
+    from{
+
+        text-shadow:
+
+        0 0 5px rgba(212,175,55,.3);
+
+    }
+
+    to{
+
+        text-shadow:
+
+        0 0 18px rgba(212,175,55,.8),
+
+        0 0 35px rgba(212,175,55,.4);
+
+    }
+
+}
+
+/*==================================
+        BUTTON SHINE LOOP
+===================================*/
+
+.buy-btn::before,
+
+.cart-btn::before{
+
+    animation:buttonGlow 4s linear infinite;
+
+}
+
+@keyframes buttonGlow{
+
+    0%{
+
+        left:-120%;
+
+    }
+
+    100%{
+
+        left:150%;
+
+    }
+
+}
+
+/*==================================
+        DOT PULSE
+===================================*/
+
+.dot.active{
+
+    animation:dotPulse 2s infinite;
+
+}
+
+@keyframes dotPulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.3);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*==================================
+        ARROW FLOAT
+===================================*/
+
+.slider-btn{
+
+    animation:arrowFloat 3s ease-in-out infinite;
+
+}
+
+@keyframes arrowFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+/*=========================================
+        FLOATING GOLD GLOW
+=========================================*/
+
+.new-arrivals{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.new-arrivals::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(212,175,55,.22),
+
+        transparent 70%
+
+    );
+
+    top:-120px;
+
+    left:-120px;
+
+    filter:blur(60px);
+
+    animation:glowMove1 10s ease-in-out infinite alternate;
+
+}
+
+.new-arrivals::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(247,231,160,.18),
+
+        transparent 70%
+
+    );
+
+    bottom:-120px;
+
+    right:-120px;
+
+    filter:blur(70px);
+
+    animation:glowMove2 12s ease-in-out infinite alternate;
+
+}
+
+@keyframes glowMove1{
+
+    0%{
+
+        transform:translate(0,0);
+
+    }
+
+    100%{
+
+        transform:translate(80px,50px);
+
+    }
+
+}
+
+@keyframes glowMove2{
+
+    0%{
+
+        transform:translate(0,0);
+
+    }
+
+    100%{
+
+        transform:translate(-70px,-40px);
+
+    }
+
+}
+/*=========================================
+        WHY CHOOSE TRISHINE ANIMATION
+=========================================*/
+
+/*=========================================
+        SECTION TITLE ANIMATION
+=========================================*/
+
+.why-trishine .section-title{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    animation:whyTitle 1s ease forwards;
+
+}
+
+@keyframes whyTitle{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+        CARD REVEAL
+=========================================*/
+
+.why-card{
+
+    opacity:0;
+
+    transform:translateY(80px);
+
+    animation:whyCardReveal .8s ease forwards;
+
+}
+
+.why-card:nth-child(1){
+
+    animation-delay:.2s;
+
+}
+
+.why-card:nth-child(2){
+
+    animation-delay:.4s;
+
+}
+
+.why-card:nth-child(3){
+
+    animation-delay:.6s;
+
+}
+
+.why-card:nth-child(4){
+
+    animation-delay:.8s;
+
+}
+
+.why-card:nth-child(5){
+
+    animation-delay:1s;
+
+}
+
+.why-card:nth-child(6){
+
+    animation-delay:1.2s;
+
+}
+
+@keyframes whyCardReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+        FLOATING CARD EFFECT
+=========================================*/
+
+.why-card{
+
+    animation:
+        whyCardReveal .8s ease forwards,
+        cardFloat 6s ease-in-out infinite;
+
+}
+
+.why-card:nth-child(even){
+
+    animation-duration:7s;
+
+}
+
+@keyframes cardFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+        ICON FLOAT
+=========================================*/
+
+.icon-box{
+
+    animation:iconFloat 4s ease-in-out infinite;
+
+}
+
+@keyframes iconFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+        ICON GLOW
+=========================================*/
+
+.why-card:hover .icon-box{
+
+    animation:iconGlow 1.5s infinite alternate;
+
+}
+
+@keyframes iconGlow{
+
+    from{
+
+        box-shadow:
+        0 0 10px rgba(212,175,55,.4);
+
+    }
+
+    to{
+
+        box-shadow:
+        0 0 30px rgba(212,175,55,.8),
+        0 0 60px rgba(212,175,55,.4);
+
+    }
+
+}
+
+/*=========================================
+        TEXT GLOW
+=========================================*/
+
+.why-card:hover h3{
+
+    animation:titleGlow 1.2s infinite alternate;
+
+}
+
+@keyframes titleGlow{
+
+    from{
+
+        text-shadow:none;
+
+    }
+
+    to{
+
+        text-shadow:
+        0 0 15px rgba(212,175,55,.6);
+
+    }
+
+}
+
+/*=========================================
+        GOLDEN SHINE
+=========================================*/
+
+.why-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+
+    left:-120%;
+
+    width:250%;
+
+    height:250%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.2),
+
+        transparent
+
+    );
+
+    transform:rotate(25deg);
+
+    opacity:0;
+
+}
+
+.why-card:hover::after{
+
+    animation:goldSweep .9s linear;
+
+}
+
+@keyframes goldSweep{
+
+    from{
+
+        top:-120%;
+
+        left:-120%;
+
+        opacity:1;
+
+    }
+
+    to{
+
+        top:100%;
+
+        left:100%;
+
+        opacity:0;
+
+    }
+
+}
+
+/*=========================================
+        SPARKLES
+=========================================*/
+
+.why-sparkles span{
+
+    position:absolute;
+
+    width:6px;
+
+    height:6px;
+
+    background:#D4AF37;
+
+    border-radius:50%;
+
+    box-shadow:0 0 12px #D4AF37;
+
+    animation:sparkleMove 8s linear infinite;
+
+}
+
+.why-sparkles span:nth-child(1){
+
+    top:10%;
+
+    left:8%;
+
+}
+
+.why-sparkles span:nth-child(2){
+
+    top:25%;
+
+    right:10%;
+
+    animation-delay:1s;
+
+}
+
+.why-sparkles span:nth-child(3){
+
+    top:55%;
+
+    left:15%;
+
+    animation-delay:2s;
+
+}
+
+.why-sparkles span:nth-child(4){
+
+    bottom:20%;
+
+    right:15%;
+
+    animation-delay:3s;
+
+}
+
+.why-sparkles span:nth-child(5){
+
+    bottom:10%;
+
+    left:45%;
+
+    animation-delay:4s;
+
+}
+
+.why-sparkles span:nth-child(6){
+
+    top:40%;
+
+    right:45%;
+
+    animation-delay:5s;
+
+}
+
+@keyframes sparkleMove{
+
+    0%{
+
+        transform:translateY(0) scale(1);
+
+        opacity:.3;
+
+    }
+
+    50%{
+
+        transform:translateY(-25px) scale(1.6);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(0) scale(1);
+
+        opacity:.3;
+
+    }
+
+}
+
+/*=========================================
+        BACKGROUND GLOW
+=========================================*/
+
+.why-trishine::before{
+
+    animation:glowOne 12s ease-in-out infinite alternate;
+
+}
+
+.why-trishine::after{
+
+    animation:glowTwo 14s ease-in-out infinite alternate;
+
+}
+
+@keyframes glowOne{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(80px,40px);
+
+    }
+
+}
+
+@keyframes glowTwo{
+
+    from{
+        transform:translate(0,0);
+    }
+
+    to{
+        transform:translate(-70px,-40px);
+    }
+}
+
+/*=========================================
+FLOAT IMAGE
+=========================================*/
+
+@keyframes floatImage{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-18px);
+}
+
+}
+
+.image-frame{
+animation:floatImage 6s ease-in-out infinite;
+}
+
+/*=========================================
+GLOW PULSE
+=========================================*/
+
+@keyframes glowPulse{
+
+0%,100%{
+box-shadow:0 0 20px rgba(212,175,55,.3);
+}
+
+50%{
+box-shadow:0 0 55px rgba(212,175,55,.8);
+}
+
+}
+
+.image-frame{
+animation:
+floatImage 6s ease-in-out infinite,
+glowPulse 3s ease-in-out infinite;
+}
+
+/*=========================================
+FLOAT DIAMONDS
+=========================================*/
+
+@keyframes diamondFloat{
+
+0%,100%{
+transform:translateY(0) rotate(0deg);
+opacity:.8;
+}
+
+50%{
+transform:translateY(-20px) rotate(180deg);
+opacity:1;
+}
+
+}
+
+.diamond{
+animation:diamondFloat 5s ease-in-out infinite;
+}
+
+.d2{animation-delay:1s;}
+.d3{animation-delay:2s;}
+.d4{animation-delay:3s;}
+.d5{animation-delay:4s;}
+.d6{animation-delay:5s;}
+
+/*=========================================
+BUTTON GLOW
+=========================================*/
+
+@keyframes buttonGlow{
+
+0%,100%{
+box-shadow:0 0 20px rgba(212,175,55,.35);
+}
+
+50%{
+box-shadow:0 0 45px rgba(212,175,55,.75);
+}
+
+}
+
+.story-btn{
+animation:buttonGlow 2.5s ease-in-out infinite;
+}
+
+/*=========================================
+LIGHT BEAM
+=========================================*/
+
+@keyframes beamPulse{
+
+0%,100%{
+transform:scale(1);
+opacity:.5;
+}
+
+50%{
+transform:scale(1.2);
+opacity:.9;
+}
+
+}
+
+.light-beam{
+animation:beamPulse 4s ease-in-out infinite;
+}
+/*=========================================
+FLOAT FRAME
+=========================================*/
+
+@keyframes floatFrame{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+}
+
+.image-frame{
+animation:floatFrame 6s ease-in-out infinite;
+}
+
+/*=========================================
+BORDER SHINE
+=========================================*/
+
+.image-frame::before{
+background-size:300% 300%;
+animation:borderShine 5s linear infinite;
+}
+
+@keyframes borderShine{
+
+0%{
+background-position:0% 50%;
+}
+
+100%{
+background-position:100% 50%;
+}
+
+}
+
+/*=========================================
+EMERALD GLOW
+=========================================*/
+
+@keyframes emeraldGlow{
+
+0%,100%{
+opacity:.2;
+transform:translate(-50%,-50%) scale(1);
+}
+
+50%{
+opacity:.45;
+transform:translate(-50%,-50%) scale(1.15);
+}
+
+}
+
+.image-frame::after{
+animation:emeraldGlow 4s ease-in-out infinite;
+}
+
+/*=========================================
+SPARKLES
+=========================================*/
+
+@keyframes sparkle{
+
+0%,100%{
+opacity:.3;
+transform:scale(.8) rotate(0deg);
+}
+
+50%{
+opacity:1;
+transform:scale(1.4) rotate(180deg);
+}
+
+}
+
+.fs1{
+animation:sparkle 2.5s infinite;
+}
+
+.fs2{
+animation:sparkle 3s infinite .5s;
+}
+
+.fs3{
+animation:sparkle 2.8s infinite 1s;
+}
+
+.fs4{
+animation:sparkle 3.2s infinite 1.5s;
+}
+/*=========================================
+MAIL ICON FLOAT
+=========================================*/
+
+@keyframes mailFloat{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+}
+
+.mail-icon{
+animation:mailFloat 4s ease-in-out infinite;
+}
+
+/*=========================================
+CARD FLOAT
+=========================================*/
+
+@keyframes cardFloat{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+}
+
+.newsletter-card{
+animation:cardFloat 6s ease-in-out infinite;
+}
+
+/*=========================================
+BUTTON GLOW
+=========================================*/
+
+@keyframes buttonGlow{
+
+0%,100%{
+box-shadow:0 0 18px rgba(212,175,55,.3);
+}
+
+50%{
+box-shadow:0 0 40px rgba(212,175,55,.7);
+}
+
+}
+
+.subscribe-btn{
+animation:buttonGlow 2.5s ease-in-out infinite;
+}
+
+/*=========================================
+SPARKLES
+=========================================*/
+
+@keyframes sparkleFloat{
+
+0%,100%{
+transform:translateY(0) scale(1);
+opacity:.4;
+}
+
+50%{
+transform:translateY(-18px) scale(1.4);
+opacity:1;
+}
+
+}
+
+.newsletter-sparkle{
+animation:sparkleFloat 5s ease-in-out infinite;
+}
+
+.ns2{animation-delay:1s;}
+.ns3{animation-delay:2s;}
+.ns4{animation-delay:3s;}
+.ns5{animation-delay:4s;}
+.ns6{animation-delay:5s;}
+
+/*=========================================
+FOOTER SOCIAL GLOW
+=========================================*/
+
+@keyframes socialGlow{
+
+0%,100%{
+box-shadow:0 0 15px rgba(212,175,55,.2);
+}
+
+50%{
+box-shadow:0 0 35px rgba(212,175,55,.6);
+}
+
+}
+
+.footer-social a{
+animation:socialGlow 3s ease-in-out infinite;
+}
+
+/*=========================================
+PAYMENT ICONS
+=========================================*/
+
+@keyframes paymentFloat{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-5px);
+}
+
+}
+
+.payment-icons i:nth-child(1){
+animation:paymentFloat 2.5s infinite;
+}
+
+.payment-icons i:nth-child(2){
+animation:paymentFloat 2.5s infinite .3s;
+}
+
+.payment-icons i:nth-child(3){
+animation:paymentFloat 2.5s infinite .6s;
+}
+
+.payment-icons i:nth-child(4){
+animation:paymentFloat 2.5s infinite .9s;
+}
+
+/*=========================================
+FOOTER GLOW
+=========================================*/
+
+@keyframes footerGlow{
+
+0%,100%{
+opacity:.12;
+transform:scale(1);
+}
+
+50%{
+opacity:.28;
+transform:scale(1.2);
+}
+
+}
+
+.footer-glow{
+animation:footerGlow 8s ease-in-out infinite;
+}
+
+/*=========================================
+LOGO GLOW
+=========================================*/
+
+@keyframes logoGlow{
+
+0%,100%{
+text-shadow:0 0 10px rgba(212,175,55,.3);
+}
+
+50%{
+text-shadow:
+0 0 15px rgba(212,175,55,.5),
+0 0 30px rgba(212,175,55,.8);
+}
+
+}
+
+.footer-about h2{
+animation:logoGlow 3s ease-in-out infinite;
+}
+
+/*=========================================
+TRUST BADGE ICON FLOAT
+=========================================*/
+
+@keyframes badgeFloat{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-5px);
+}
+
+}
+
+.trust-badge i{
+animation:badgeFloat 3s ease-in-out infinite;
+}
+
+/*=========================================
+ICON GLOW
+=========================================*/
+
+@keyframes badgeGlow{
+
+0%,100%{
+box-shadow:0 0 15px rgba(212,175,55,.3);
+}
+
+50%{
+box-shadow:0 0 30px rgba(212,175,55,.7);
+}
+
+}
+
+.trust-badge i{
+animation:
+badgeFloat 3s ease-in-out infinite,
+badgeGlow 2.5s ease-in-out infinite;
+}
+
+/*=========================================
+        SHOP HERO ANIMATIONS
+=========================================*/
+
+/*=========================================
+FLOATING CONTENT
+=========================================*/
+
+@keyframes heroFloat{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+}
+
+.shop-hero-content{
+animation:heroFloat 5s ease-in-out infinite;
+}
+
+/*=========================================
+BUTTON GLOW
+=========================================*/
+
+@keyframes buttonGlow{
+
+0%,100%{
+box-shadow:0 0 20px rgba(212,175,55,.35);
+}
+
+50%{
+box-shadow:
+0 0 35px rgba(212,175,55,.6),
+0 0 60px rgba(212,175,55,.25);
+}
+
+}
+
+.shop-btn{
+animation:buttonGlow 2.8s ease-in-out infinite;
+}
+
+/*=========================================
+SPARKLE FLOAT
+=========================================*/
+
+@keyframes sparkleFloat{
+
+0%,100%{
+transform:translateY(0) scale(1);
+opacity:.5;
+}
+
+50%{
+transform:translateY(-18px) scale(1.4);
+opacity:1;
+}
+
+}
+
+.shop-sparkle{
+animation:sparkleFloat 5s ease-in-out infinite;
+}
+
+.sp2{
+animation-delay:1s;
+}
+
+.sp3{
+animation-delay:2s;
+}
+
+.sp4{
+animation-delay:3s;
+}
+
+.sp5{
+animation-delay:4s;
+}
+
+/*=========================================
+BACKGROUND GLOW
+=========================================*/
+
+@keyframes heroGlow{
+
+0%,100%{
+filter:brightness(100%);
+}
+
+50%{
+filter:brightness(120%);
+}
+
+}
+
+.shop-overlay{
+animation:heroGlow 8s ease-in-out infinite;
+}
+
+/*=========================================
+HEADING FADE
+=========================================*/
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.shop-tag{
+animation:fadeUp .8s ease forwards;
+}
+
+.shop-hero-content h1{
+animation:fadeUp 1s ease forwards;
+}
+
+.shop-hero-content p{
+animation:fadeUp 1.2s ease forwards;
+}
+
+.breadcrumb{
+animation:fadeUp 1.4s ease forwards;
+}
+
+.shop-btn{
+animation:
+buttonGlow 2.8s ease-in-out infinite,
+fadeUp 1.6s ease forwards;
+}
+
+/*=========================================
+      FEATURED COLLECTION ANIMATIONS
+=========================================*/
+
+/*=========================================
+      CARD REVEAL
+=========================================*/
+
+@keyframes featuredReveal{
+
+from{
+opacity:0;
+transform:translateY(45px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.featured-shop-card{
+opacity:0;
+animation:featuredReveal .9s ease forwards;
+}
+
+
+/*=========================================
+      STAGGERED CARD DELAY
+=========================================*/
+
+.featured-shop-card:nth-child(1){
+animation-delay:.1s;
+}
+
+.featured-shop-card:nth-child(2){
+animation-delay:.25s;
+}
+
+.featured-shop-card:nth-child(3){
+animation-delay:.4s;
+}
+
+.featured-shop-card:nth-child(4){
+animation-delay:.55s;
+}
+
+.featured-shop-card:nth-child(5){
+animation-delay:.7s;
+}
+
+
+/*=========================================
+      CARD FLOAT
+=========================================*/
+
+@keyframes cardFloat{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-5px);
+}
+
+}
+
+.featured-shop-card:hover{
+animation:
+featuredReveal .9s ease forwards,
+cardFloat 3s ease-in-out infinite;
+}
+
+
+/*=========================================
+      IMAGE ZOOM
+=========================================*/
+
+.featured-shop-card img{
+transition:
+transform 1s cubic-bezier(.2,.7,.2,1),
+filter 1s ease;
+}
+
+.featured-shop-card:hover img{
+transform:scale(1.1);
+}
+
+
+/*=========================================
+      CONTENT SLIDE UP
+=========================================*/
+
+.featured-card-content{
+transform:translateY(15px);
+opacity:.9;
+transition:
+transform .5s ease,
+opacity .5s ease;
+}
+
+.featured-shop-card:hover .featured-card-content{
+transform:translateY(0);
+opacity:1;
+}
+
+
+/*=========================================
+      NUMBER GLOW
+=========================================*/
+
+.collection-number{
+transition:
+background .4s ease,
+box-shadow .4s ease,
+transform .4s ease;
+}
+
+.featured-shop-card:hover .collection-number{
+background:rgba(212,175,55,.15);
+box-shadow:
+0 0 15px rgba(212,175,55,.35);
+transform:rotate(8deg);
+}
+
+
+/*=========================================
+      EXPLORE ARROW
+=========================================*/
+
+@keyframes arrowMove{
+
+0%,100%{
+transform:translateX(0);
+}
+
+50%{
+transform:translateX(5px);
+}
+
+}
+
+.featured-shop-card:hover .featured-explore i{
+animation:arrowMove 1s ease-in-out infinite;
+}
+
+
+/*=========================================
+      GOLD SHINE
+=========================================*/
+
+@keyframes goldShine{
+
+0%{
+left:-120%;
+}
+
+100%{
+left:140%;
+}
+
+}
+
+.featured-shop-card:hover::after{
+animation:goldShine 1s ease forwards;
+}
+
+
+/*=========================================
+      EXPLORE MORE BUTTON
+=========================================*/
+
+@keyframes buttonPulse{
+
+0%,100%{
+box-shadow:0 0 0 rgba(212,175,55,0);
+}
+
+50%{
+box-shadow:
+0 0 20px rgba(212,175,55,.2);
+}
+
+}
+
+.featured-more-btn{
+animation:buttonPulse 3s ease-in-out infinite;
+}
+
+
+/*=========================================
+      BUTTON ARROW
+=========================================*/
+
+@keyframes arrowDown{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(5px);
+}
+
+}
+
+.featured-more-btn i{
+animation:arrowDown 1.5s ease-in-out infinite;
+}
+
+
+/*=========================================
+        SECTION HEADING ANIMATION
+=========================================*/
+
+@keyframes featuredHeading{
+
+0%{
+opacity:0;
+transform:translateY(20px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.featured-shop-section .section-title span{
+opacity:1;
+animation:featuredHeading .8s ease both;
+}
+
+.featured-shop-section .section-title h2{
+opacity:1;
+animation:featuredHeading 1s ease both;
+animation-delay:.15s;
+}
+
+.featured-shop-section .section-title p{
+opacity:1;
+animation:featuredHeading 1.2s ease both;
+animation-delay:.3s;
+}
+
+/* =========================================================
+   TRISHINE — PRODUCT SECTION ANIMATIONS
+   animation.css
+   ========================================================= */
+
+
+/* =========================================================
+   1. PRODUCT SECTION REVEAL
+   ========================================================= */
+
+.products-section {
+    animation: sectionFadeUp 1s ease both;
+}
+
+@keyframes sectionFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   2. PRODUCT CARD ENTRY ANIMATION
+   ========================================================= */
+
+.product-card {
+    opacity: 0;
+    transform: translateY(50px) scale(0.96);
+    animation: productCardReveal 0.8s ease forwards;
+}
+
+/* Staggered animation */
+
+.product-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.product-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.product-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.product-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.product-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.product-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.product-card:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.product-card:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+@keyframes productCardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   3. PRODUCT CARD HOVER
+   ========================================================= */
+
+.product-card {
+    transition:
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.5s ease,
+        border-color 0.4s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-12px) scale(1.015);
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.18),
+        0 0 30px rgba(212, 175, 55, 0.12);
+}
+
+
+/* =========================================================
+   4. PRODUCT IMAGE HOVER
+   ========================================================= */
+
+.product-image {
+    overflow: hidden;
+}
+
+.product-image img {
+    transition:
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.1);
+    filter: brightness(1.05);
+}
+
+
+/* =========================================================
+   5. FLOATING PRODUCT IMAGE
+   ========================================================= */
+
+.product-image img {
+    animation: productFloat 5s ease-in-out infinite;
+}
+
+.product-card:hover .product-image img {
+    animation-play-state: paused;
+}
+
+@keyframes productFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+
+/* =========================================================
+   6. GOLDEN SHINE EFFECT
+   ========================================================= */
+
+.product-image {
+    position: relative;
+}
+
+.product-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+    pointer-events: none;
+}
+
+.product-card:hover .product-image::after {
+    animation: imageShine 1s ease;
+}
+
+@keyframes imageShine {
+    from {
+        left: -120%;
+    }
+
+    to {
+        left: 140%;
+    }
+}
+
+
+/* =========================================================
+   7. PRODUCT TITLE HOVER
+   ========================================================= */
+
+.product-card .product-title {
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.product-card:hover .product-title {
+    transform: translateX(3px);
+    color: #c9a227;
+}
+
+
+/* =========================================================
+   8. PRODUCT PRICE ANIMATION
+   ========================================================= */
+
+.product-price {
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.product-card:hover .product-price {
+    transform: scale(1.05);
+    color: #c9a227;
+}
+
+
+/* =========================================================
+   9. ADD TO CART BUTTON
+   ========================================================= */
+
+.product-card .add-cart-btn {
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+.product-card .add-cart-btn:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+
+/* Button shine */
+
+.product-card .add-cart-btn::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.35),
+        transparent
+    );
+
+    transform: skewX(-25deg);
+}
+
+.product-card .add-cart-btn:hover::before {
+    animation: buttonShine 0.8s ease;
+}
+
+@keyframes buttonShine {
+    from {
+        left: -120%;
+    }
+
+    to {
+        left: 150%;
+    }
+}
+
+
+/* =========================================================
+   10. BUY NOW BUTTON
+   ========================================================= */
+
+.buy-now-btn {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.buy-now-btn:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 8px 25px rgba(212, 175, 55, 0.35);
+}
+
+
+/* =========================================================
+   11. WISHLIST HEART
+   ========================================================= */
+
+.wishlist-btn {
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.wishlist-btn:hover {
+    transform: scale(1.15);
+}
+
+.wishlist-btn i {
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.wishlist-btn:hover i {
+    transform: scale(1.2);
+    color: #c9a227;
+}
+
+
+/* =========================================================
+   12. PRODUCT BADGE
+   ========================================================= */
+
+.product-badge {
+    animation: badgePulse 2.5s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+
+/* =========================================================
+   13. NEW / SALE BADGE SHINE
+   ========================================================= */
+
+.product-badge {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-badge::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.45),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+}
+
+.product-badge:hover::after {
+    animation: badgeShine 0.8s ease;
+}
+
+@keyframes badgeShine {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 150%;
+    }
+}
+
+
+/* =========================================================
+   14. PRODUCT CARD GLOW
+   ========================================================= */
+
+.product-card::before {
+    content: "";
+
+    position: absolute;
+    inset: -1px;
+
+    border-radius: inherit;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(212, 175, 55, 0.25),
+        transparent
+    );
+
+    opacity: 0;
+
+    transition: opacity 0.5s ease;
+
+    pointer-events: none;
+}
+
+.product-card:hover::before {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   15. CATEGORY FILTER BUTTONS
+   ========================================================= */
+
+.category-btn {
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.category-btn:hover {
+    transform: translateY(-3px);
+}
+
+.category-btn.active {
+    animation: activeCategory 0.4s ease;
+}
+
+@keyframes activeCategory {
+    0% {
+        transform: scale(0.9);
+    }
+
+    70% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================================
+   16. FILTERED PRODUCT ANIMATION
+   ========================================================= */
+
+.product-card.filter-hide {
+    animation: productHide 0.4s ease forwards;
+}
+
+.product-card.filter-show {
+    animation: productShow 0.5s ease forwards;
+}
+
+@keyframes productHide {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+}
+
+@keyframes productShow {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================================
+   17. QUICK VIEW BUTTON
+   ========================================================= */
+
+.quick-view-btn {
+    opacity: 0;
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+.product-card:hover .quick-view-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   18. PRODUCT DETAILS SLIDE
+   ========================================================= */
+
+.product-details {
+    transition:
+        transform 0.4s ease,
+        opacity 0.4s ease;
+}
+
+.product-card:hover .product-details {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   19. STAR RATING
+   ========================================================= */
+
+.product-rating i {
+    display: inline-block;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+.product-card:hover .product-rating i:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.product-card:hover .product-rating i:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.product-card:hover .product-rating i:nth-child(3) {
+    transition-delay: 0.15s;
+}
+
+.product-card:hover .product-rating i:nth-child(4) {
+    transition-delay: 0.2s;
+}
+
+.product-card:hover .product-rating i:nth-child(5) {
+    transition-delay: 0.25s;
+}
+
+.product-card:hover .product-rating i {
+    transform: translateY(-3px) scale(1.1);
+}
+
+
+/* =========================================================
+   20. PRODUCT GRID HOVER DIM EFFECT
+   ========================================================= */
+
+.products-grid:hover .product-card:not(:hover) {
+    opacity: 0.75;
+    transform: scale(0.98);
+}
+
+.products-grid .product-card {
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* =========================================================
+   21. VIEW MORE PRODUCTS BUTTON
+   ========================================================= */
+
+.view-more-btn {
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.view-more-btn:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.view-more-btn::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+
+    transform: skewX(-25deg);
+}
+
+.view-more-btn:hover::before {
+    animation: viewMoreShine 0.9s ease;
+}
+
+@keyframes viewMoreShine {
+    from {
+        left: -120%;
+    }
+
+    to {
+        left: 150%;
+    }
+}
+
+
+/* =========================================================
+   22. CART ICON BOUNCE
+   ========================================================= */
+
+.cart-icon {
+    transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+    animation: cartBounce 0.6s ease;
+}
+
+@keyframes cartBounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(-6px);
+    }
+
+    60% {
+        transform: translateY(2px);
+    }
+}
+
+
+/* =========================================================
+   23. CART COUNT
+   ========================================================= */
+
+.cart-count {
+    animation: cartCountPop 0.35s ease;
+}
+
+@keyframes cartCountPop {
+    0% {
+        transform: scale(0);
+    }
+
+    70% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================================
+   24. REDUCED MOTION — ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}
+
+/*=========================================
+        SHOP OFFER ANIMATIONS
+=========================================*/
+
+
+/*=========================================
+        OFFER SECTION REVEAL
+=========================================*/
+
+.shop-offer-container{
+    animation:shopOfferReveal 1s ease both;
+}
+
+@keyframes shopOfferReveal{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/*=========================================
+        OFFER CONTENT REVEAL
+=========================================*/
+
+.shop-offer-content{
+    animation:shopOfferContent 1s ease .2s both;
+}
+
+@keyframes shopOfferContent{
+
+    from{
+        opacity:0;
+        transform:translateX(-35px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+
+/*=========================================
+        OFFER IMAGE REVEAL
+=========================================*/
+
+.shop-offer-image{
+    animation:shopOfferImage 1.2s ease .3s both;
+}
+
+@keyframes shopOfferImage{
+
+    from{
+        opacity:0;
+        transform:translateX(40px) scale(.9);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0) scale(1);
+    }
+
+}
+
+
+/*=========================================
+        FLOATING JEWELLERY
+=========================================*/
+
+.shop-offer-image img{
+
+    animation:
+        shopJewelleryFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes shopJewelleryFloat{
+
+    0%{
+        transform:translateY(0) rotate(0deg);
+    }
+
+    50%{
+        transform:translateY(-12px) rotate(1deg);
+    }
+
+    100%{
+        transform:translateY(0) rotate(0deg);
+    }
+
+}
+
+
+/*=========================================
+        GOLD GLOW PULSE
+=========================================*/
+
+.shop-offer-glow{
+
+    animation:shopOfferGlow 4s ease-in-out infinite;
+
+}
+
+@keyframes shopOfferGlow{
+
+    0%,
+    100%{
+        transform:scale(1);
+        opacity:.65;
+    }
+
+    50%{
+        transform:scale(1.12);
+        opacity:1;
+    }
+
+}
+
+
+/*=========================================
+        DIAMOND FLOATING
+=========================================*/
+
+.shop-offer-diamond-one{
+
+    animation:
+        shopDiamondFloatOne 4s ease-in-out infinite;
+
+}
+
+@keyframes shopDiamondFloatOne{
+
+    0%,
+    100%{
+        transform:translateY(0) rotate(45deg);
+        opacity:.45;
+    }
+
+    50%{
+        transform:translateY(-15px) rotate(90deg);
+        opacity:1;
+    }
+
+}
+
+
+.shop-offer-diamond-two{
+
+    animation:
+        shopDiamondFloatTwo 5s ease-in-out infinite;
+
+}
+
+@keyframes shopDiamondFloatTwo{
+
+    0%,
+    100%{
+        transform:translateY(0) rotate(45deg);
+        opacity:.35;
+    }
+
+    50%{
+        transform:translateY(12px) rotate(135deg);
+        opacity:.9;
+    }
+
+}
+
+
+.shop-offer-diamond-three{
+
+    animation:
+        shopDiamondFloatThree 4.5s ease-in-out infinite;
+
+}
+
+@keyframes shopDiamondFloatThree{
+
+    0%,
+    100%{
+        transform:translate(0,0) rotate(45deg);
+        opacity:.4;
+    }
+
+    50%{
+        transform:translate(-10px,-18px) rotate(90deg);
+        opacity:1;
+    }
+
+}
+
+
+/*=========================================
+        OFFER BUTTON ANIMATION
+=========================================*/
+
+.shop-offer-btn{
+
+    animation:shopButtonGlow 3s ease-in-out infinite;
+
+}
+
+@keyframes shopButtonGlow{
+
+    0%,
+    100%{
+        box-shadow:0 0 0 rgba(212,175,55,0);
+    }
+
+    50%{
+        box-shadow:
+            0 0 18px rgba(212,175,55,.18);
+    }
+
+}
+
+
+/*=========================================
+        OFFER HIGHLIGHT
+=========================================*/
+
+.shop-offer-highlight strong{
+
+    animation:shopPriceGlow 2.5s ease-in-out infinite;
+
+}
+
+@keyframes shopPriceGlow{
+
+    0%,
+    100%{
+        text-shadow:0 0 0 rgba(212,175,55,0);
+    }
+
+    50%{
+        text-shadow:
+            0 0 12px rgba(212,175,55,.35);
+    }
+
+}
+
+
+/*=========================================
+        HOVER IMAGE EFFECT
+=========================================*/
+
+.shop-offer-image:hover img{
+
+    transform:scale(1.04);
+
+    transition:transform .5s ease;
+
+}
+
+
+/*=========================================
+        REDUCED MOTION
+=========================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+    .shop-offer-container,
+    .shop-offer-content,
+    .shop-offer-image,
+    .shop-offer-image img,
+    .shop-offer-glow,
+    .shop-offer-diamond-one,
+    .shop-offer-diamond-two,
+    .shop-offer-diamond-three,
+    .shop-offer-btn,
+    .shop-offer-highlight strong{
+
+        animation:none;
+
+    }
+
+}
+
+/*=========================================
+        SHOP CUSTOMER REVIEWS
+        ANIMATION CSS
+=========================================*/
+
+
+/*=========================================
+        SECTION REVEAL
+=========================================*/
+
+.shop-reviews-section{
+    animation:shopReviewsReveal 1s ease both;
+}
+
+@keyframes shopReviewsReveal{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+
+/*=========================================
+        HEADING ANIMATION
+=========================================*/
+
+.shop-reviews-heading{
+    animation:shopReviewsHeading 1s ease .15s both;
+}
+
+@keyframes shopReviewsHeading{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/*=========================================
+        LABEL ANIMATION
+=========================================*/
+
+.shop-reviews-label{
+    animation:shopReviewsLabel 1s ease .25s both;
+}
+
+@keyframes shopReviewsLabel{
+
+    from{
+        opacity:0;
+        letter-spacing:8px;
+    }
+
+    to{
+        opacity:1;
+        letter-spacing:4px;
+    }
+
+}
+
+
+/*=========================================
+        REVIEW CARD ENTRANCE
+=========================================*/
+
+.shop-review-card{
+    animation:shopReviewCard 0.8s ease both;
+}
+
+.shop-review-card:nth-child(1){
+    animation-delay:.2s;
+}
+
+.shop-review-card:nth-child(2){
+    animation-delay:.35s;
+}
+
+.shop-review-card:nth-child(3){
+    animation-delay:.5s;
+}
+
+.shop-review-card:nth-child(4){
+    animation-delay:.65s;
+}
+
+.shop-review-card:nth-child(5){
+    animation-delay:.8s;
+}
+
+.shop-review-card:nth-child(6){
+    animation-delay:.95s;
+}
+
+.shop-review-card:nth-child(7){
+    animation-delay:1.1s;
+}
+
+@keyframes shopReviewCard{
+
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+/*=========================================
+        STAR GLOW
+=========================================*/
+
+.shop-review-stars{
+    animation:shopStarsGlow 3s ease-in-out infinite;
+}
+
+@keyframes shopStarsGlow{
+
+    0%,
+    100%{
+        text-shadow:none;
+    }
+
+    50%{
+        text-shadow:
+            0 0 10px rgba(212,175,55,.4);
+    }
+
+}
+
+
+/*=========================================
+        CUSTOMER IMAGE
+=========================================*/
+
+.shop-review-image{
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+.shop-review-card:hover .shop-review-image{
+
+    transform:scale(1.08);
+
+    box-shadow:
+        0 0 15px rgba(212,175,55,.25);
+
+}
+
+
+/*=========================================
+        CARD GOLD LINE
+=========================================*/
+
+.shop-review-card::before{
+
+    transform:scaleX(.5);
+
+    transform-origin:left;
+
+    transition:
+        transform .4s ease,
+        width .4s ease;
+
+}
+
+.shop-review-card:hover::before{
+
+    transform:scaleX(1);
+
+    width:70px;
+
+}
+
+
+/*=========================================
+        REVIEW ARROWS
+=========================================*/
+
+.shop-review-arrow{
+
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        color .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.shop-review-arrow:hover{
+
+    transform:translateY(-3px) scale(1.08);
+
+}
+
+
+/*=========================================
+        DOT ANIMATION
+=========================================*/
+
+.shop-review-dot{
+
+    transition:
+        width .4s ease,
+        background .4s ease,
+        transform .3s ease;
+
+}
+
+.shop-review-dot:hover{
+
+    transform:scale(1.25);
+
+}
+
+.shop-review-dot.active{
+
+    animation:shopActiveDot 2s ease-in-out infinite;
+
+}
+
+@keyframes shopActiveDot{
+
+    0%,
+    100%{
+        box-shadow:
+            0 0 0 rgba(212,175,55,0);
+    }
+
+    50%{
+        box-shadow:
+            0 0 10px rgba(212,175,55,.35);
+    }
+
+}
+
+
+/*=========================================
+        REVIEW TEXT HOVER
+=========================================*/
+
+.shop-review-text{
+
+    transition:
+        color .3s ease;
+
+}
+
+.shop-review-card:hover .shop-review-text{
+
+    color:#ffffff;
+
+}
+
+
+/*=========================================
+        REDUCED MOTION
+=========================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+    .shop-reviews-section,
+    .shop-reviews-heading,
+    .shop-reviews-label,
+    .shop-review-card,
+    .shop-review-stars,
+    .shop-review-dot.active{
+
+        animation:none;
+
+    }
+
+}
+
+
+/*=========================================
+        NEWSLETTER ANIMATIONS
+=========================================*/
+
+
+/*=========================================
+        SECTION ENTRANCE
+=========================================*/
+
+.shop-newsletter-container{
+
+    animation:
+        newsletterReveal
+        1s
+        ease
+        both;
+
+}
+
+
+@keyframes newsletterReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(50px)
+            scale(.97);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/*=========================================
+        GOLD TOP LINE GLOW
+=========================================*/
+
+.shop-newsletter-container::before{
+
+    animation:
+        newsletterLineGlow
+        3s
+        ease-in-out
+        infinite alternate;
+
+}
+
+
+@keyframes newsletterLineGlow{
+
+    from{
+
+        opacity:.5;
+
+        box-shadow:
+            0 0 10px
+            rgba(212,175,55,.4);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        box-shadow:
+            0 0 25px
+            rgba(212,175,55,.9);
+
+    }
+
+}
+
+
+/*=========================================
+        BACKGROUND GLOW
+=========================================*/
+
+.newsletter-glow-one{
+
+    animation:
+        newsletterGlowOne
+        8s
+        ease-in-out
+        infinite alternate;
+
+}
+
+
+.newsletter-glow-two{
+
+    animation:
+        newsletterGlowTwo
+        10s
+        ease-in-out
+        infinite alternate;
+
+}
+
+
+@keyframes newsletterGlowOne{
+
+    from{
+
+        transform:
+            translate(0,0)
+            scale(1);
+
+        opacity:.04;
+
+    }
+
+    to{
+
+        transform:
+            translate(100px,70px)
+            scale(1.2);
+
+        opacity:.09;
+
+    }
+
+}
+
+
+@keyframes newsletterGlowTwo{
+
+    from{
+
+        transform:
+            translate(0,0)
+            scale(1);
+
+        opacity:.04;
+
+    }
+
+    to{
+
+        transform:
+            translate(-90px,-60px)
+            scale(1.25);
+
+        opacity:.09;
+
+    }
+
+}
+
+
+/*=========================================
+        FLOATING DIAMONDS
+=========================================*/
+
+.diamond-one{
+
+    animation:
+        diamondFloatOne
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.diamond-two{
+
+    animation:
+        diamondFloatTwo
+        6s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes diamondFloatOne{
+
+    0%{
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity:.25;
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-18px)
+            rotate(45deg);
+
+        opacity:.6;
+
+    }
+
+    100%{
+
+        transform:
+            translateY(0)
+            rotate(90deg);
+
+        opacity:.25;
+
+    }
+
+}
+
+
+@keyframes diamondFloatTwo{
+
+    0%{
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity:.25;
+
+    }
+
+    50%{
+
+        transform:
+            translateY(20px)
+            rotate(-45deg);
+
+        opacity:.6;
+
+    }
+
+    100%{
+
+        transform:
+            translateY(0)
+            rotate(-90deg);
+
+        opacity:.25;
+
+    }
+
+}
+
+
+/*=========================================
+        INPUT GLOW
+=========================================*/
+
+.newsletter-input{
+
+    animation:
+        inputGlow
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes inputGlow{
+
+    0%,
+    100%{
+
+        box-shadow:
+            0 0 0
+            rgba(212,175,55,0);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 18px
+            rgba(212,175,55,.08);
+
+    }
+
+}
+
+
+/*=========================================
+        SUBSCRIBE BUTTON GLOW
+=========================================*/
+
+.newsletter-btn{
+
+    animation:
+        newsletterButtonGlow
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes newsletterButtonGlow{
+
+    0%,
+    100%{
+
+        box-shadow:
+            0 0 0
+            rgba(212,175,55,0);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 0 20px
+            rgba(212,175,55,.25);
+
+    }
+
+}
+
+
+/*=========================================
+        BUTTON HOVER
+=========================================*/
+
+.newsletter-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.newsletter-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:70%;
+
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.45),
+            transparent
+        );
+
+    transform:skewX(-25deg);
+
+}
+
+
+.newsletter-btn:hover::before{
+
+    animation:
+        newsletterShine
+        .8s
+        ease;
+
+}
+
+
+@keyframes newsletterShine{
+
+    from{
+
+        left:-120%;
+
+    }
+
+    to{
+
+        left:150%;
+
+    }
+
+}
+
+
+/*=========================================
+        BUTTON ICON
+=========================================*/
+
+.newsletter-btn i{
+
+    transition:
+        transform .4s ease;
+
+}
+
+
+.newsletter-btn:hover i{
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/*=========================================
+        ACCESSIBILITY
+=========================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+    .shop-newsletter-container,
+    .newsletter-glow-one,
+    .newsletter-glow-two,
+    .diamond-one,
+    .diamond-two,
+    .newsletter-input,
+    .newsletter-btn,
+    .shop-newsletter-container::before{
+
+        animation:none;
+
+    }
+
+}
+
+/*=========================================================
+                BEGINNING OF COLLECTION PAGE
+                ANIMATION CSS
+=========================================================*/
+
+
+/*=========================================
+        HERO CONTENT ENTRANCE
+=========================================*/
+
+.collection-hero-content{
+
+    animation:
+        collectionContentReveal
+        1s
+        ease-out
+        both;
+
+}
+
+
+@keyframes collectionContentReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateX(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateX(0);
+
+    }
+
+}
+
+
+/*=========================================
+        SUBTITLE
+=========================================*/
+
+.collection-hero-subtitle{
+
+    animation:
+        collectionSubtitleReveal
+        .8s
+        ease-out
+        .2s
+        both;
+
+}
+
+
+@keyframes collectionSubtitleReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(15px);
+
+        letter-spacing:8px;
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+        letter-spacing:4px;
+
+    }
+
+}
+
+
+/*=========================================
+        HEADING
+=========================================*/
+
+.collection-hero-content h1{
+
+    animation:
+        collectionHeadingReveal
+        1s
+        ease-out
+        .25s
+        both;
+
+}
+
+
+@keyframes collectionHeadingReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/*=========================================
+        PARAGRAPH
+=========================================*/
+
+.collection-hero-content p{
+
+    animation:
+        collectionParagraphReveal
+        1s
+        ease-out
+        .45s
+        both;
+
+}
+
+
+@keyframes collectionParagraphReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/*=========================================
+        BUTTONS
+=========================================*/
+
+.collection-hero-buttons{
+
+    animation:
+        collectionButtonsReveal
+        1s
+        ease-out
+        .6s
+        both;
+
+}
+
+
+@keyframes collectionButtonsReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/*=========================================
+        JEWELRY IMAGE FLOAT
+=========================================*/
+
+.collection-floating-image{
+
+    animation:
+        collectionImageFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes collectionImageFloat{
+
+    0%{
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-16px)
+            rotate(1deg);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+}
+
+
+/*=========================================
+        IMAGE GLOW PULSE
+=========================================*/
+
+.collection-image-glow{
+
+    animation:
+        collectionImageGlow
+        4s
+        ease-in-out
+        infinite alternate;
+
+}
+
+
+@keyframes collectionImageGlow{
+
+    from{
+
+        transform:
+            scale(.9);
+
+        opacity:.08;
+
+    }
+
+    to{
+
+        transform:
+            scale(1.15);
+
+        opacity:.16;
+
+    }
+
+}
+
+
+/*=========================================
+        DECORATIVE RINGS
+=========================================*/
+
+.ring-one{
+
+    animation:
+        collectionRingRotate
+        18s
+        linear
+        infinite;
+
+}
+
+
+.ring-two{
+
+    animation:
+        collectionRingRotateReverse
+        25s
+        linear
+        infinite;
+
+}
+
+
+@keyframes collectionRingRotate{
+
+    from{
+
+        transform:
+            rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+@keyframes collectionRingRotateReverse{
+
+    from{
+
+        transform:
+            rotate(360deg);
+
+    }
+
+    to{
+
+        transform:
+            rotate(0deg);
+
+    }
+
+}
+
+
+/*=========================================
+        FLOATING DIAMONDS
+=========================================*/
+
+.collection-diamond-one{
+
+    animation:
+        collectionDiamondOne
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.collection-diamond-two{
+
+    animation:
+        collectionDiamondTwo
+        6s
+        ease-in-out
+        infinite;
+
+}
+
+
+.collection-diamond-three{
+
+    animation:
+        collectionDiamondThree
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes collectionDiamondOne{
+
+    0%,
+    100%{
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity:.25;
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-20px)
+            rotate(45deg);
+
+        opacity:.65;
+
+    }
+
+}
+
+
+@keyframes collectionDiamondTwo{
+
+    0%,
+    100%{
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity:.25;
+
+    }
+
+    50%{
+
+        transform:
+            translateY(18px)
+            rotate(-45deg);
+
+        opacity:.65;
+
+    }
+
+}
+
+
+@keyframes collectionDiamondThree{
+
+    0%,
+    100%{
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        opacity:.25;
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-15px)
+            scale(1.3);
+
+        opacity:.7;
+
+    }
+
+}
+
+
+/*=========================================
+        SPARKLES
+=========================================*/
+
+.collection-sparkle{
+
+    animation:
+        collectionSparkle
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+.sparkle-two{
+
+    animation-delay:
+        .8s;
+
+}
+
+
+.sparkle-three{
+
+    animation-delay:
+        1.5s;
+
+}
+
+
+@keyframes collectionSparkle{
+
+    0%,
+    100%{
+
+        opacity:.2;
+
+        transform:
+            scale(.7)
+            rotate(0deg);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:
+            scale(1.25)
+            rotate(45deg);
+
+    }
+
+}
+
+
+/*=========================================
+        SCROLL INDICATOR
+=========================================*/
+
+.collection-scroll{
+
+    animation:
+        collectionScrollFloat
+        2s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes collectionScrollFloat{
+
+    0%,
+    100%{
+
+        transform:
+            translateX(-50%)
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateX(-50%)
+            translateY(8px);
+
+    }
+
+}
+
+
+/*=========================================
+        SCROLL ARROW
+=========================================*/
+
+.collection-scroll i{
+
+    animation:
+        collectionArrow
+        1.5s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes collectionArrow{
+
+    0%,
+    100%{
+
+        transform:
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(5px);
+
+    }
+
+}
+
+
+/*=========================================
+        BUTTON SHINE
+=========================================*/
+
+.collection-btn-primary{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.collection-btn-primary::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:70%;
+
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.45),
+            transparent
+        );
+
+    transform:
+        skewX(-25deg);
+
+}
+
+
+.collection-btn-primary:hover::before{
+
+    animation:
+        collectionButtonShine
+        .8s
+        ease;
+
+}
+
+
+@keyframes collectionButtonShine{
+
+    from{
+
+        left:-120%;
+
+    }
+
+    to{
+
+        left:150%;
+
+    }
+
+}
+
+
+/*=========================================
+        REDUCED MOTION
+=========================================*/
+
+@media(prefers-reduced-motion:reduce){
+
+    .collection-hero-content,
+    .collection-hero-subtitle,
+    .collection-hero-content h1,
+    .collection-hero-content p,
+    .collection-hero-buttons,
+    .collection-floating-image,
+    .collection-image-glow,
+    .collection-ring,
+    .collection-diamond,
+    .collection-sparkle,
+    .collection-scroll,
+    .collection-scroll i{
+
+        animation:none;
+
+    }
+
+}
+/*=========================================================
+                BEGINNING OF COLLECTION PAGE
+                EXPLORE OUR COLLECTIONS
+                ANIMATION.CSS
+=========================================================*/
+
+
+/*=========================================================
+                SECTION INTRO ANIMATION
+=========================================================*/
+
+.collection-explore {
+    animation: collectionExploreFadeIn 1s ease both;
+}
+
+@keyframes collectionExploreFadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/*=========================================================
+                SECTION HEADING ANIMATION
+=========================================================*/
+
+.collection-explore-eyebrow {
+    animation:
+        collectionEyebrowReveal 0.8s ease 0.15s both;
+}
+
+
+.collection-explore-heading h2 {
+    animation:
+        collectionHeadingReveal 0.9s ease 0.3s both;
+}
+
+
+.collection-explore-heading p {
+    animation:
+        collectionParagraphReveal 0.9s ease 0.45s both;
+}
+
+
+/* Eyebrow */
+
+@keyframes collectionEyebrowReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        letter-spacing: 7px;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 3px;
+    }
+
+}
+
+
+/* Heading */
+
+@keyframes collectionHeadingReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Paragraph */
+
+@keyframes collectionParagraphReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/*=========================================================
+                BACKGROUND GLOW ANIMATION
+=========================================================*/
+
+.collection-explore-glow-left {
+    animation:
+        collectionGlowLeft 8s ease-in-out infinite;
+}
+
+
+.collection-explore-glow-right {
+    animation:
+        collectionGlowRight 9s ease-in-out infinite;
+}
+
+
+@keyframes collectionGlowLeft {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.20;
+    }
+
+    50% {
+        transform: translate(35px, -25px) scale(1.12);
+        opacity: 0.32;
+    }
+
+}
+
+
+@keyframes collectionGlowRight {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.20;
+    }
+
+    50% {
+        transform: translate(-35px, 25px) scale(1.1);
+        opacity: 0.32;
+    }
+
+}
+
+
+/*=========================================================
+                COLLECTION CARD REVEAL
+=========================================================*/
+
+.collection-explore-card {
+    opacity: 0;
+
+    animation:
+        collectionCardReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+}
+
+
+/* Staggered animation */
+
+.collection-explore-card:nth-child(1) {
+    animation-delay: 0.20s;
+}
+
+.collection-explore-card:nth-child(2) {
+    animation-delay: 0.30s;
+}
+
+.collection-explore-card:nth-child(3) {
+    animation-delay: 0.40s;
+}
+
+.collection-explore-card:nth-child(4) {
+    animation-delay: 0.50s;
+}
+
+.collection-explore-card:nth-child(5) {
+    animation-delay: 0.60s;
+}
+
+.collection-explore-card:nth-child(6) {
+    animation-delay: 0.70s;
+}
+
+
+@keyframes collectionCardReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/*=========================================================
+                CARD HOVER ANIMATION
+=========================================================*/
+
+.collection-explore-card {
+    transition:
+        transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.6s ease,
+        border-color 0.5s ease;
+}
+
+
+.collection-explore-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.40);
+}
+
+
+/*=========================================================
+                CARD IMAGE ZOOM
+=========================================================*/
+
+.collection-explore-card img {
+    transition:
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.7s ease;
+}
+
+
+.collection-explore-card:hover img {
+    transform: scale(1.08);
+
+    filter:
+        brightness(1.05)
+        saturate(1.05);
+}
+
+
+/*=========================================================
+                CARD OVERLAY ANIMATION
+=========================================================*/
+
+.collection-explore-card-overlay {
+    transition:
+        opacity 0.7s ease,
+        background 0.7s ease;
+}
+
+
+.collection-explore-card:hover
+.collection-explore-card-overlay {
+    opacity: 0.90;
+}
+
+
+/*=========================================================
+                CARD CONTENT MOVEMENT
+=========================================================*/
+
+.collection-explore-card-content {
+    transition:
+        transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.collection-explore-card:hover
+.collection-explore-card-content {
+    transform: translateY(-8px);
+}
+
+
+/*=========================================================
+                CARD CATEGORY ANIMATION
+=========================================================*/
+
+.collection-explore-card-content > span {
+    transition:
+        letter-spacing 0.5s ease,
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+.collection-explore-card:hover
+.collection-explore-card-content > span {
+    letter-spacing: 3px;
+
+    transform: translateX(3px);
+}
+
+
+/*=========================================================
+                CARD TITLE ANIMATION
+=========================================================*/
+
+.collection-explore-card-content h3 {
+    transition:
+        transform 0.5s ease,
+        text-shadow 0.5s ease;
+}
+
+
+.collection-explore-card:hover
+.collection-explore-card-content h3 {
+    transform: translateX(5px);
+
+    text-shadow:
+        0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+
+/*=========================================================
+                CARD DESCRIPTION ANIMATION
+=========================================================*/
+
+.collection-explore-card-content p {
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+
+.collection-explore-card:hover
+.collection-explore-card-content p {
+    transform: translateY(-2px);
+
+    opacity: 0.85;
+}
+
+
+/*=========================================================
+                EXPLORE LINK ANIMATION
+=========================================================*/
+
+.collection-explore-card-link {
+    transition:
+        transform 0.45s ease,
+        color 0.45s ease,
+        letter-spacing 0.45s ease;
+}
+
+
+.collection-explore-card:hover
+.collection-explore-card-link {
+    transform: translateX(5px);
+
+    letter-spacing: 0.7px;
+}
+
+
+/*=========================================================
+                ARROW ANIMATION
+=========================================================*/
+
+.collection-explore-card-link i {
+    transition:
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.collection-explore-card:hover
+.collection-explore-card-link i {
+    transform: translateX(7px);
+}
+
+
+/*=========================================================
+                CARD SHINE SWEEP
+=========================================================*/
+
+.collection-explore-card::after {
+    transition:
+        left 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.collection-explore-card:hover::after {
+    left: 130%;
+}
+
+
+/*=========================================================
+                CARD BORDER GLOW
+=========================================================*/
+
+.collection-explore-card::before {
+    transition:
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+.collection-explore-card:hover::before {
+    border-color:
+        rgba(212, 175, 55, 0.45);
+
+    box-shadow:
+        inset 0 0 25px rgba(212, 175, 55, 0.04);
+}
+
+
+/*=========================================================
+                CTA REVEAL
+=========================================================*/
+
+.collection-explore-cta {
+    animation:
+        collectionCTAReveal 0.9s ease 0.9s both;
+}
+
+
+@keyframes collectionCTAReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/*=========================================================
+                CTA BUTTON HOVER
+=========================================================*/
+
+.collection-explore-button {
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        border-color 0.45s ease,
+        background 0.45s ease;
+}
+
+
+.collection-explore-button:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(212, 175, 55, 0.85);
+
+    background:
+        rgba(212, 175, 55, 0.13);
+
+    box-shadow:
+        0 10px 30px rgba(212, 175, 55, 0.15);
+}
+
+
+/*=========================================================
+                CTA SHINE EFFECT
+=========================================================*/
+
+.collection-explore-button::before {
+    transition:
+        left 0.75s ease;
+}
+
+
+.collection-explore-button:hover::before {
+    left: 130%;
+}
+
+
+/*=========================================================
+                CTA ARROW
+=========================================================*/
+
+.collection-explore-button i {
+    transition:
+        transform 0.4s ease;
+}
+
+
+.collection-explore-button:hover i {
+    transform: translateX(7px);
+}
+
+
+/*=========================================================
+                SUBTLE CARD FLOAT
+=========================================================*/
+
+/*
+    Very subtle floating movement.
+    Applied only to selected cards so the
+    section doesn't look overly animated.
+*/
+
+.collection-explore-card:nth-child(1),
+.collection-explore-card:nth-child(4) {
+
+    animation-name:
+        collectionCardReveal,
+        collectionCardFloat;
+
+    animation-duration:
+        0.9s,
+        7s;
+
+    animation-delay:
+        0.20s,
+        2.5s;
+
+    animation-iteration-count:
+        1,
+        infinite;
+
+    animation-timing-function:
+        cubic-bezier(0.22, 1, 0.36, 1),
+        ease-in-out;
+
+    animation-fill-mode:
+        forwards,
+        both;
+}
+
+
+@keyframes collectionCardFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+}
+
+
+/*=========================================================
+                ACCESSIBILITY
+=========================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+    .collection-explore,
+    .collection-explore-eyebrow,
+    .collection-explore-heading h2,
+    .collection-explore-heading p,
+    .collection-explore-glow,
+    .collection-explore-card,
+    .collection-explore-cta {
+        animation: none !important;
+
+        opacity: 1 !important;
+
+        transform: none !important;
+    }
+
+
+    .collection-explore-card,
+    .collection-explore-card img,
+    .collection-explore-card-overlay,
+    .collection-explore-card-content,
+    .collection-explore-card-content > span,
+    .collection-explore-card-content h3,
+    .collection-explore-card-content p,
+    .collection-explore-card-link,
+    .collection-explore-card-link i,
+    .collection-explore-button,
+    .collection-explore-button i {
+        transition: none !important;
+    }
+
+}
+
+
+/*=========================================================
+                END OF COLLECTION PAGE
+                EXPLORE OUR COLLECTIONS
+                ANIMATION.CSS
+=========================================================*/
+
+/*=========================================================
+                BEGINNING OF COLLECTION PAGE
+                JEWELRY BY OCCASION
+                ANIMATION.CSS
+=========================================================*/
+
+
+/*=========================================================
+                    SECTION REVEAL
+=========================================================*/
+
+.jbo {
+    animation:
+        jbo-section-reveal 1s ease both;
+}
+
+
+@keyframes jbo-section-reveal {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/*=========================================================
+                    HEADING ANIMATIONS
+=========================================================*/
+
+.jbo-tag {
+    animation:
+        jbo-tag-reveal 0.8s ease 0.15s both;
+}
+
+
+.jbo-head h2 {
+    animation:
+        jbo-title-reveal 0.9s ease 0.3s both;
+}
+
+
+.jbo-head p {
+    animation:
+        jbo-text-reveal 0.9s ease 0.45s both;
+}
+
+
+/* Tag */
+
+@keyframes jbo-tag-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        letter-spacing: 7px;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 3px;
+    }
+
+}
+
+
+/* Title */
+
+@keyframes jbo-title-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Paragraph */
+
+@keyframes jbo-text-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/*=========================================================
+                    CARD REVEAL
+=========================================================*/
+
+.jbo-card {
+    opacity: 0;
+
+    animation:
+        jbo-card-reveal 0.9s cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+}
+
+
+/* Staggered card timing */
+
+.jbo-card:nth-child(1) {
+    animation-delay: 0.20s;
+}
+
+.jbo-card:nth-child(2) {
+    animation-delay: 0.32s;
+}
+
+.jbo-card:nth-child(3) {
+    animation-delay: 0.44s;
+}
+
+.jbo-card:nth-child(4) {
+    animation-delay: 0.56s;
+}
+
+.jbo-card:nth-child(5) {
+    animation-delay: 0.68s;
+}
+
+
+@keyframes jbo-card-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(45px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/*=========================================================
+                    CARD HOVER
+=========================================================*/
+
+.jbo-card {
+    transition:
+        transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.65s ease,
+        border-color 0.5s ease;
+}
+
+
+.jbo-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 28px 65px rgba(0, 0, 0, 0.42);
+}
+
+
+/*=========================================================
+                    IMAGE ZOOM
+=========================================================*/
+
+.jbo-card img {
+
+    transition:
+        transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.7s ease;
+}
+
+
+.jbo-card:hover img {
+
+    transform:
+        scale(1.09);
+
+    filter:
+        brightness(1.06)
+        saturate(1.05);
+}
+
+
+/*=========================================================
+                    OVERLAY EFFECT
+=========================================================*/
+
+.jbo-overlay {
+
+    transition:
+        opacity 0.7s ease;
+}
+
+
+.jbo-card:hover .jbo-overlay {
+
+    opacity:
+        0.92;
+}
+
+
+/*=========================================================
+                    CARD CONTENT
+=========================================================*/
+
+.jbo-info {
+
+    transition:
+        transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.jbo-card:hover .jbo-info {
+
+    transform:
+        translateY(-8px);
+}
+
+
+/*=========================================================
+                    CARD NUMBER
+=========================================================*/
+
+.jbo-info > span {
+
+    transition:
+        letter-spacing 0.5s ease,
+        transform 0.5s ease;
+}
+
+
+.jbo-card:hover .jbo-info > span {
+
+    letter-spacing:
+        3px;
+
+    transform:
+        translateX(3px);
+}
+
+
+/*=========================================================
+                    CARD TITLE
+=========================================================*/
+
+.jbo-info h3 {
+
+    transition:
+        transform 0.5s ease,
+        text-shadow 0.5s ease;
+}
+
+
+.jbo-card:hover .jbo-info h3 {
+
+    transform:
+        translateX(5px);
+
+    text-shadow:
+        0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+
+/*=========================================================
+                    CARD DESCRIPTION
+=========================================================*/
+
+.jbo-info p {
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+
+.jbo-card:hover .jbo-info p {
+
+    opacity:
+        0.88;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/*=========================================================
+                    SHOP LINK
+=========================================================*/
+
+.jbo-link {
+
+    transition:
+        transform 0.45s ease,
+        color 0.45s ease,
+        letter-spacing 0.45s ease;
+}
+
+
+.jbo-card:hover .jbo-link {
+
+    transform:
+        translateX(5px);
+
+    letter-spacing:
+        1px;
+}
+
+
+/*=========================================================
+                    ARROW ANIMATION
+=========================================================*/
+
+.jbo-link i {
+
+    transition:
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.jbo-card:hover .jbo-link i {
+
+    transform:
+        translateX(7px);
+}
+
+
+/*=========================================================
+                    GOLD BORDER GLOW
+=========================================================*/
+
+.jbo-card::before {
+
+    transition:
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+.jbo-card:hover::before {
+
+    border-color:
+        rgba(212, 175, 55, 0.45);
+
+    box-shadow:
+        inset 0 0 30px
+        rgba(212, 175, 55, 0.04);
+}
+
+
+/*=========================================================
+                    LIGHT SHINE SWEEP
+=========================================================*/
+
+.jbo-card::after {
+
+    transition:
+        left 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.jbo-card:hover::after {
+
+    left:
+        130%;
+}
+
+
+/*=========================================================
+                    SUBTLE CARD FLOAT
+=========================================================*/
+
+/*
+    Only selected cards receive a very subtle
+    floating effect to keep the section elegant.
+*/
+
+.jbo-card:nth-child(2),
+.jbo-card:nth-child(5) {
+
+    animation-name:
+        jbo-card-reveal,
+        jbo-card-float;
+
+    animation-duration:
+        0.9s,
+        7s;
+
+    animation-delay:
+        0.32s,
+        2.5s;
+
+    animation-iteration-count:
+        1,
+        infinite;
+
+    animation-timing-function:
+        cubic-bezier(0.22, 1, 0.36, 1),
+        ease-in-out;
+
+    animation-fill-mode:
+        forwards,
+        both;
+}
+
+
+@keyframes jbo-card-float {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-5px);
+    }
+
+}
+
+
+/*=========================================================
+                    FOOTER QUOTE REVEAL
+=========================================================*/
+
+.jbo-foot {
+
+    animation:
+        jbo-foot-reveal 0.9s ease 0.85s both;
+}
+
+
+@keyframes jbo-foot-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/*=========================================================
+                    DECORATIVE LINE
+=========================================================*/
+
+.jbo-line {
+
+    transform:
+        scaleX(0);
+
+    transform-origin:
+        center;
+
+    animation:
+        jbo-line-grow 1s ease 1.1s forwards;
+}
+
+
+@keyframes jbo-line-grow {
+
+    from {
+        transform:
+            scaleX(0);
+    }
+
+    to {
+        transform:
+            scaleX(1);
+    }
+
+}
+
+
+/*=========================================================
+                    REDUCED MOTION
+=========================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+
+    .jbo,
+    .jbo-tag,
+    .jbo-head h2,
+    .jbo-head p,
+    .jbo-card,
+    .jbo-foot,
+    .jbo-line {
+
+        animation:
+            none !important;
+
+        opacity:
+            1 !important;
+
+        transform:
+            none !important;
+    }
+
+
+    .jbo-card,
+    .jbo-card img,
+    .jbo-overlay,
+    .jbo-info,
+    .jbo-info > span,
+    .jbo-info h3,
+    .jbo-info p,
+    .jbo-link,
+    .jbo-link i {
+
+        transition:
+            none !important;
+    }
+
+}
+
+
+/*=========================================================
+                END OF COLLECTION PAGE
+                JEWELRY BY OCCASION
+                ANIMATION.CSS
+=========================================================*/
+
+/* =========================================================
+   BEGINNING OF COLLECTION PAGE
+   FIND YOUR SHINE CTA
+   ANIMATION.CSS
+========================================================= */
+
+
+/* =========================================================
+   SECTION REVEAL
+========================================================= */
+
+.fys {
+    animation: fys-section-reveal 1.2s ease both;
+}
+
+@keyframes fys-section-reveal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   CONTENT REVEAL
+========================================================= */
+
+.fys-content {
+    animation: fys-content-reveal 1.1s ease 0.2s both;
+}
+
+@keyframes fys-content-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TAG REVEAL
+========================================================= */
+
+.fys-tag {
+    animation: fys-tag-reveal 0.9s ease 0.35s both;
+}
+
+@keyframes fys-tag-reveal {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================================================
+   HEADING REVEAL
+========================================================= */
+
+.fys-content h2 {
+    animation: fys-heading-reveal 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+}
+
+@keyframes fys-heading-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(45px);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+
+/* =========================================================
+   GOLD HEADING SHIMMER
+========================================================= */
+
+.fys-content h2 span {
+    background-size: 200% auto;
+
+    animation:
+        fys-gold-shimmer 5s ease-in-out 1.5s infinite alternate;
+}
+
+@keyframes fys-gold-shimmer {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: 100% center;
+    }
+}
+
+
+/* =========================================================
+   DESCRIPTION REVEAL
+========================================================= */
+
+.fys-content > p {
+    animation: fys-description-reveal 1s ease 0.7s both;
+}
+
+@keyframes fys-description-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   BUTTONS REVEAL
+========================================================= */
+
+.fys-actions {
+    animation: fys-actions-reveal 1s ease 0.9s both;
+}
+
+@keyframes fys-actions-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   MAIN BUTTON HOVER
+========================================================= */
+
+.fys-btn-main:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 40px rgba(212, 175, 55, 0.24),
+        0 0 25px rgba(212, 175, 55, 0.08);
+}
+
+
+/* =========================================================
+   MAIN BUTTON ARROW
+========================================================= */
+
+.fys-btn-main i {
+    transition:
+        transform 0.4s ease;
+}
+
+.fys-btn-main:hover i {
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   MAIN BUTTON SHINE
+========================================================= */
+
+.fys-btn-main::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            100deg,
+            transparent,
+            rgba(255, 255, 255, 0.35),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.75s ease;
+}
+
+.fys-btn-main:hover::before {
+    left: 140%;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON HOVER
+========================================================= */
+
+.fys-btn-alt:hover {
+    transform: translateY(-4px);
+
+    color: #f0d777;
+
+    border-color: rgba(212, 175, 55, 0.65);
+
+    background:
+        rgba(212, 175, 55, 0.055);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.20),
+        0 0 20px rgba(212, 175, 55, 0.05);
+}
+
+
+/* =========================================================
+   ART REVEAL
+========================================================= */
+
+.fys-art {
+    animation: fys-art-reveal 1.3s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+}
+
+@keyframes fys-art-reveal {
+    from {
+        opacity: 0;
+        transform: scale(0.82) translateX(30px);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateX(0);
+        filter: blur(0);
+    }
+}
+
+
+/* =========================================================
+   OUTER RING ROTATION
+========================================================= */
+
+.fys-ring-one {
+    animation:
+        fys-ring-rotate-one 28s linear infinite;
+}
+
+@keyframes fys-ring-rotate-one {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   SECOND RING ROTATION
+========================================================= */
+
+.fys-ring-two {
+    animation:
+        fys-ring-rotate-two 20s linear infinite reverse;
+}
+
+@keyframes fys-ring-rotate-two {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================================
+   INNER RING FLOAT
+========================================================= */
+
+.fys-ring-three {
+    animation:
+        fys-ring-float 4s ease-in-out infinite;
+}
+
+@keyframes fys-ring-float {
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-8px) scale(1.015);
+    }
+}
+
+
+/* =========================================================
+   DIAMOND FLOAT
+========================================================= */
+
+.fys-diamond {
+    animation:
+        fys-diamond-float 5s ease-in-out infinite,
+        fys-diamond-glow 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes fys-diamond-float {
+    0%,
+    100% {
+        transform: rotate(45deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(45deg) translateY(-12px);
+    }
+}
+
+@keyframes fys-diamond-glow {
+    from {
+        box-shadow:
+            0 0 35px rgba(212, 175, 55, 0.12),
+            inset 0 0 25px rgba(212, 175, 55, 0.05);
+    }
+
+    to {
+        box-shadow:
+            0 0 60px rgba(212, 175, 55, 0.24),
+            inset 0 0 35px rgba(212, 175, 55, 0.10);
+    }
+}
+
+
+/* =========================================================
+   ORB FLOATING
+========================================================= */
+
+.fys-orb-one {
+    animation:
+        fys-orb-one-float 8s ease-in-out infinite;
+}
+
+@keyframes fys-orb-one-float {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-15px, 18px);
+    }
+}
+
+
+.fys-orb-two {
+    animation:
+        fys-orb-two-float 7s ease-in-out infinite;
+}
+
+@keyframes fys-orb-two-float {
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(12px, -15px);
+    }
+}
+
+
+/* =========================================================
+   AMBIENT GLOW PULSE
+========================================================= */
+
+.fys-glow-left {
+    animation:
+        fys-glow-left-pulse 7s ease-in-out infinite alternate;
+}
+
+@keyframes fys-glow-left-pulse {
+    from {
+        opacity: 0.12;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 0.22;
+        transform: scale(1.08);
+    }
+}
+
+
+.fys-glow-right {
+    animation:
+        fys-glow-right-pulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes fys-glow-right-pulse {
+    from {
+        opacity: 0.06;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 0.13;
+        transform: scale(1.08);
+    }
+}
+
+
+/* =========================================================
+   BACKGROUND SPARK ANIMATION
+========================================================= */
+
+.fys-spark {
+    animation:
+        fys-spark-pulse 3s ease-in-out infinite;
+}
+
+.fys-spark-two {
+    animation-delay: 1s;
+}
+
+.fys-spark-three {
+    animation-delay: 2s;
+}
+
+@keyframes fys-spark-pulse {
+    0%,
+    100% {
+        opacity: 0.35;
+        transform: scale(0.8) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15) rotate(45deg);
+    }
+}
+
+
+/* =========================================================
+   ART SPARK ANIMATION
+========================================================= */
+
+.fys-art-spark {
+    animation:
+        fys-art-spark-float 3.5s ease-in-out infinite;
+}
+
+.spark-b {
+    animation-delay: 1.1s;
+}
+
+.spark-c {
+    animation-delay: 2s;
+}
+
+@keyframes fys-art-spark-float {
+    0%,
+    100% {
+        opacity: 0.35;
+        transform: translateY(0) scale(0.85);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-9px) scale(1.1);
+    }
+}
+
+
+/* =========================================================
+   BOTTOM BRAND STATEMENT
+========================================================= */
+
+.fys-bottom {
+    animation:
+        fys-bottom-reveal 1s ease 1.1s both;
+}
+
+@keyframes fys-bottom-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   BOTTOM LINES
+========================================================= */
+
+.fys-line {
+    animation:
+        fys-line-grow 1.2s ease 1.35s both;
+}
+
+@keyframes fys-line-grow {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 90px;
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .fys,
+    .fys-content,
+    .fys-tag,
+    .fys-content h2,
+    .fys-content > p,
+    .fys-actions,
+    .fys-art,
+    .fys-bottom,
+    .fys-line,
+    .fys-ring,
+    .fys-ring-three,
+    .fys-diamond,
+    .fys-orb,
+    .fys-glow,
+    .fys-spark,
+    .fys-art-spark,
+    .fys-content h2 span {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   END OF COLLECTION PAGE
+   FIND YOUR SHINE CTA
+   ANIMATION.CSS
+========================================================= */
+
+/* =========================================================
+   BEGINNING OF COLLECTION PAGE
+   NEWSLETTER SECTION
+   ANIMATION.CSS
+========================================================= */
+
+
+/* =========================================================
+   SECTION REVEAL
+========================================================= */
+
+.nl {
+    animation: nl-section-reveal 1.1s ease both;
+}
+
+@keyframes nl-section-reveal {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   MAIN CONTENT REVEAL
+========================================================= */
+
+.nl-wrap {
+    animation: nl-content-reveal 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+@keyframes nl-content-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   TAG REVEAL
+========================================================= */
+
+.nl-tag {
+    animation: nl-tag-reveal 0.9s ease 0.25s both;
+}
+
+@keyframes nl-tag-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+        letter-spacing: 1px;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 3px;
+    }
+
+}
+
+
+/* =========================================================
+   TITLE REVEAL
+========================================================= */
+
+.nl-title {
+    animation: nl-title-reveal 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
+}
+
+@keyframes nl-title-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+        filter: blur(7px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
+}
+
+
+/* =========================================================
+   GOLD TITLE SHIMMER
+========================================================= */
+
+.nl-title span {
+
+    background-size: 200% auto;
+
+    animation:
+        nl-gold-shimmer 5s ease-in-out 1.3s infinite alternate;
+
+}
+
+@keyframes nl-gold-shimmer {
+
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: 100% center;
+    }
+
+}
+
+
+/* =========================================================
+   DESCRIPTION REVEAL
+========================================================= */
+
+.nl-text {
+    animation: nl-text-reveal 0.9s ease 0.65s both;
+}
+
+@keyframes nl-text-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   FORM REVEAL
+========================================================= */
+
+.nl-form {
+    animation: nl-form-reveal 1s ease 0.8s both;
+}
+
+@keyframes nl-form-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   INPUT FOCUS GLOW
+========================================================= */
+
+.nl-input-wrap:focus-within {
+
+    box-shadow:
+        0 0 0 1px rgba(212, 175, 55, 0.05),
+        0 0 28px rgba(212, 175, 55, 0.07);
+
+}
+
+
+/* =========================================================
+   INPUT ICON FOCUS
+========================================================= */
+
+.nl-input-wrap i {
+
+    transition:
+        color 0.4s ease,
+        transform 0.4s ease;
+
+}
+
+.nl-input-wrap:focus-within i {
+
+    color: #d4af37;
+
+    transform: scale(1.08);
+
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
+
+.nl-button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 35px rgba(212, 175, 55, 0.20),
+        0 0 20px rgba(212, 175, 55, 0.07);
+
+    border-color:
+        rgba(247, 220, 122, 0.9);
+
+}
+
+
+/* =========================================================
+   BUTTON ARROW
+========================================================= */
+
+.nl-button i {
+
+    transition:
+        transform 0.4s ease;
+
+}
+
+.nl-button:hover i {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =========================================================
+   BUTTON GOLD SHINE
+========================================================= */
+
+.nl-button::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            100deg,
+            transparent,
+            rgba(255, 255, 255, 0.38),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition:
+        left 0.75s ease;
+
+}
+
+.nl-button:hover::before {
+
+    left: 140%;
+
+}
+
+
+/* =========================================================
+   PRIVACY NOTE REVEAL
+========================================================= */
+
+.nl-note {
+
+    animation:
+        nl-note-reveal 0.8s ease 1s both;
+
+}
+
+@keyframes nl-note-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   BRAND REVEAL
+========================================================= */
+
+.nl-brand {
+
+    animation:
+        nl-brand-reveal 1s ease 1.15s both;
+
+}
+
+@keyframes nl-brand-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   BRAND LINES
+========================================================= */
+
+.nl-line {
+
+    animation:
+        nl-line-grow 1s ease 1.35s both;
+
+}
+
+@keyframes nl-line-grow {
+
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 70px;
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   AMBIENT GLOW PULSE
+========================================================= */
+
+.nl-glow-left {
+
+    animation:
+        nl-glow-left-pulse 7s ease-in-out infinite alternate;
+
+}
+
+@keyframes nl-glow-left-pulse {
+
+    from {
+        opacity: 0.08;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 0.17;
+        transform: scale(1.08);
+    }
+
+}
+
+
+.nl-glow-right {
+
+    animation:
+        nl-glow-right-pulse 8s ease-in-out infinite alternate;
+
+}
+
+@keyframes nl-glow-right-pulse {
+
+    from {
+        opacity: 0.05;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 0.11;
+        transform: scale(1.08);
+    }
+
+}
+
+
+/* =========================================================
+   DECORATIVE CIRCLE FLOAT
+========================================================= */
+
+.nl-circle-one {
+
+    animation:
+        nl-circle-one-float 9s ease-in-out infinite;
+
+}
+
+@keyframes nl-circle-one-float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(12px, 16px);
+    }
+
+}
+
+
+.nl-circle-two {
+
+    animation:
+        nl-circle-two-float 7s ease-in-out infinite;
+
+}
+
+@keyframes nl-circle-two-float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-12px, -14px);
+    }
+
+}
+
+
+/* =========================================================
+   SPARKLE ANIMATION
+========================================================= */
+
+.nl-spark {
+
+    animation:
+        nl-spark-pulse 3.5s ease-in-out infinite;
+
+}
+
+.nl-spark-two {
+    animation-delay: 1s;
+}
+
+.nl-spark-three {
+    animation-delay: 2s;
+}
+
+@keyframes nl-spark-pulse {
+
+    0%,
+    100% {
+        opacity: 0.30;
+        transform: scale(0.8) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15) rotate(45deg);
+    }
+
+}
+
+
+/* =========================================================
+   SPARKLE GLOW
+========================================================= */
+
+.nl-spark-one,
+.nl-spark-two,
+.nl-spark-three {
+
+    transition:
+        text-shadow 0.4s ease;
+
+}
+
+
+/* =========================================================
+   HOVER INPUT SUBTLE LIFT
+========================================================= */
+
+.nl-input-wrap:hover {
+
+    border-color:
+        rgba(212, 175, 55, 0.34);
+
+}
+
+
+/* =========================================================
+   BUTTON PRESS EFFECT
+========================================================= */
+
+.nl-button:active {
+
+    transform: translateY(-1px) scale(0.98);
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .nl,
+    .nl-wrap,
+    .nl-tag,
+    .nl-title,
+    .nl-title span,
+    .nl-text,
+    .nl-form,
+    .nl-note,
+    .nl-brand,
+    .nl-line,
+    .nl-glow,
+    .nl-circle,
+    .nl-spark {
+
+        animation: none !important;
+
+        transition: none !important;
+
+    }
+
+}
+
+
+/* =========================================================
+   END OF COLLECTION PAGE
+   NEWSLETTER SECTION
+   ANIMATION.CSS
+========================================================= */
+/* =========================================================
+   BEGINNING OF ABOUT PAGE
+   ABOUT HERO — ANIMATION CSS
+========================================================= */
+
+
+/* =========================================================
+   HERO SECTION REVEAL
+========================================================= */
+
+.abh {
+    animation: abh-section-reveal 1.2s ease both;
+}
+
+@keyframes abh-section-reveal {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   CONTENT REVEAL
+========================================================= */
+
+.abh-content {
+    animation: abh-content-reveal 1.1s 0.25s ease both;
+}
+
+@keyframes abh-content-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateX(-45px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =========================================================
+   EYEBROW REVEAL
+========================================================= */
+
+.abh-tag {
+    animation: abh-tag-reveal 0.8s 0.35s ease both;
+}
+
+@keyframes abh-tag-reveal {
+
+    from {
+        opacity: 0;
+        letter-spacing: 1px;
+    }
+
+    to {
+        opacity: 1;
+        letter-spacing: 4px;
+    }
+
+}
+
+
+/* =========================================================
+   TITLE REVEAL
+========================================================= */
+
+.abh-title {
+    animation: abh-title-reveal 1s 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes abh-title-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   GOLD TITLE SHIMMER
+========================================================= */
+
+.abh-title span {
+    background-size: 220% 100%;
+
+    animation:
+        abh-gold-shimmer 5s 1.5s ease-in-out infinite;
+}
+
+@keyframes abh-gold-shimmer {
+
+    0% {
+        background-position: 100% 50%;
+    }
+
+    50% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+
+}
+
+
+/* =========================================================
+   SUBTITLE REVEAL
+========================================================= */
+
+.abh-subtitle {
+    animation: abh-subtitle-reveal 0.9s 0.65s ease both;
+}
+
+@keyframes abh-subtitle-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   DESCRIPTION REVEAL
+========================================================= */
+
+.abh-text {
+    animation: abh-text-reveal 0.9s 0.8s ease both;
+}
+
+@keyframes abh-text-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   BUTTON REVEAL
+========================================================= */
+
+.abh-actions {
+    animation: abh-actions-reveal 0.9s 0.95s ease both;
+}
+
+@keyframes abh-actions-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   MAIN BUTTON GOLD SHINE
+========================================================= */
+
+.abh-btn-main::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: -120%;
+
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(
+        105deg,
+        transparent,
+        rgba(255, 255, 255, 0.42),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.7s ease;
+
+    pointer-events: none;
+}
+
+.abh-btn-main:hover::before {
+    left: 140%;
+}
+
+
+/* =========================================================
+   BUTTON PRESS EFFECT
+========================================================= */
+
+.abh-btn:active {
+    transform: translateY(-1px) scale(0.985);
+}
+
+
+/* =========================================================
+   SIGNATURE REVEAL
+========================================================= */
+
+.abh-signature {
+    animation: abh-signature-reveal 0.9s 1.1s ease both;
+}
+
+@keyframes abh-signature-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =========================================================
+   SIGNATURE LINE
+========================================================= */
+
+.abh-signature-line {
+    transform-origin: left center;
+
+    animation: abh-signature-line 1s 1.35s ease both;
+}
+
+@keyframes abh-signature-line {
+
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+
+}
+
+
+/* =========================================================
+   HERO IMAGE REVEAL
+========================================================= */
+
+.abh-visual {
+    animation: abh-visual-reveal 1.25s 0.3s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes abh-visual-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateX(50px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   IMAGE FRAME REVEAL
+========================================================= */
+
+.abh-image-frame {
+    animation: abh-image-frame-reveal 1.3s 0.5s ease both;
+}
+
+@keyframes abh-image-frame-reveal {
+
+    from {
+        clip-path: inset(0 0 100% 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+
+}
+
+
+/* =========================================================
+   IMAGE SLOW FLOAT
+========================================================= */
+
+.abh-image-frame {
+    animation:
+        abh-image-frame-reveal 1.3s 0.5s ease both,
+        abh-image-float 8s 1.8s ease-in-out infinite;
+}
+
+@keyframes abh-image-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+}
+
+
+/* =========================================================
+   DECORATIVE RING FLOAT
+========================================================= */
+
+.abh-ring-one {
+    animation:
+        abh-ring-one-float 7s ease-in-out infinite;
+}
+
+@keyframes abh-ring-one-float {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(-8px, -12px) rotate(8deg);
+    }
+
+}
+
+
+.abh-ring-two {
+    animation:
+        abh-ring-two-float 6s ease-in-out infinite;
+}
+
+@keyframes abh-ring-two-float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(7px, -8px);
+    }
+
+}
+
+
+/* =========================================================
+   DIAMOND FLOAT
+========================================================= */
+
+.abh-diamond {
+    animation:
+        abh-diamond-float 4.5s ease-in-out infinite;
+}
+
+@keyframes abh-diamond-float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-9px) rotate(45deg);
+    }
+
+}
+
+
+/* =========================================================
+   VISUAL SPARKS
+========================================================= */
+
+.abh-visual-spark-one {
+    animation:
+        abh-spark-float-one 4s ease-in-out infinite;
+}
+
+@keyframes abh-spark-float-one {
+
+    0%,
+    100% {
+        opacity: 0.45;
+        transform: translateY(0) scale(0.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1.15);
+    }
+
+}
+
+
+.abh-visual-spark-two {
+    animation:
+        abh-spark-float-two 5s 1s ease-in-out infinite;
+}
+
+@keyframes abh-spark-float-two {
+
+    0%,
+    100% {
+        opacity: 0.35;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: translateY(-8px);
+    }
+
+}
+
+
+/* =========================================================
+   BACKGROUND SPARK PULSE
+========================================================= */
+
+.abh-spark {
+    animation:
+        abh-background-spark 4s ease-in-out infinite;
+}
+
+.abh-spark-two {
+    animation-delay: 1.2s;
+}
+
+.abh-spark-three {
+    animation-delay: 2.1s;
+}
+
+@keyframes abh-background-spark {
+
+    0%,
+    100% {
+        opacity: 0.25;
+        transform: scale(0.85);
+    }
+
+    50% {
+        opacity: 0.85;
+        transform: scale(1.1);
+    }
+
+}
+
+
+/* =========================================================
+   ORB FLOAT
+========================================================= */
+
+.abh-orb-one {
+    animation:
+        abh-orb-one-float 10s ease-in-out infinite;
+}
+
+@keyframes abh-orb-one-float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(-12px, 15px);
+    }
+
+}
+
+
+.abh-orb-two {
+    animation:
+        abh-orb-two-float 8s 1s ease-in-out infinite;
+}
+
+@keyframes abh-orb-two-float {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(10px, -12px);
+    }
+
+}
+
+
+/* =========================================================
+   AMBIENT GLOW PULSE
+========================================================= */
+
+.abh-glow-left {
+    animation:
+        abh-glow-left-pulse 8s ease-in-out infinite;
+}
+
+@keyframes abh-glow-left-pulse {
+
+    0%,
+    100% {
+        opacity: 0.32;
+    }
+
+    50% {
+        opacity: 0.52;
+    }
+
+}
+
+
+.abh-glow-right {
+    animation:
+        abh-glow-right-pulse 9s 1s ease-in-out infinite;
+}
+
+@keyframes abh-glow-right-pulse {
+
+    0%,
+    100% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.45;
+    }
+
+}
+
+
+/* =========================================================
+   IMAGE CAPTION REVEAL
+========================================================= */
+
+.abh-caption {
+    animation:
+        abh-caption-reveal 1s 1.25s ease both;
+}
+
+@keyframes abh-caption-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   CAPTION LINE
+========================================================= */
+
+.abh-caption-line {
+    transform-origin: left center;
+
+    animation:
+        abh-caption-line-grow 0.8s 1.55s ease both;
+}
+
+@keyframes abh-caption-line-grow {
+
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+========================================================= */
+
+.abh-scroll {
+    animation:
+        abh-scroll-reveal 1s 1.5s ease both;
+}
+
+@keyframes abh-scroll-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   SCROLL ARROW
+========================================================= */
+
+.abh-scroll i {
+    animation:
+        abh-scroll-arrow 1.8s ease-in-out infinite;
+}
+
+@keyframes abh-scroll-arrow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+}
+
+
+/* =========================================================
+   SCROLL LINE SHIMMER
+========================================================= */
+
+.abh-scroll-line {
+    background-size: 200% 100%;
+
+    animation:
+        abh-scroll-line-shimmer 4s ease-in-out infinite;
+}
+
+@keyframes abh-scroll-line-shimmer {
+
+    0% {
+        background-position: 100% 50%;
+    }
+
+    50% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .abh,
+    .abh-content,
+    .abh-tag,
+    .abh-title,
+    .abh-subtitle,
+    .abh-text,
+    .abh-actions,
+    .abh-signature,
+    .abh-visual,
+    .abh-image-frame,
+    .abh-title span,
+    .abh-ring,
+    .abh-diamond,
+    .abh-visual-spark,
+    .abh-spark,
+    .abh-orb,
+    .abh-glow,
+    .abh-caption,
+    .abh-scroll,
+    .abh-scroll i,
+    .abh-scroll-line {
+        animation: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   END OF ABOUT PAGE
+   ABOUT HERO — ANIMATION CSS
+========================================================= */
+
+/* ==================== */ 
+.ats-signature-line { 
+    transform-origin: left center; 
+    animation: ats-signature-line 1.2s cubic-bezier(0.22, 1, 0.36, 1) 
+    forwards; animation-delay: 1.55s; } 
+    @keyframes 
+    ats-signature-line { from { transform: scaleX(0); } to { transform: scaleX(1); } } 
+    /* ========================================================= SIGNATURE GOLD TEXT ========================================================= */ 
+    .ats-signature-content strong { transition: text-shadow 0.4s ease, letter-spacing 0.4s ease; } 
+    .ats-signature-content strong:hover { letter-spacing: 2.8px; text-shadow: 0 0 16px rgba(212, 175, 55, 0.25); } 
+    /* ========================================================= BOTTOM STATEMENT ========================================================= */ 
+    .ats-bottom { 
+        opacity: 0;
+        animation: ats-bottom-reveal 1s cubic-bezier(0.22, 1, 0.36, 1)
+        forwards; animation-delay: 1.55s; }
+          @keyframes ats-bottom-reveal { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } } 
+          /* ========================================================= BOTTOM LINES ========================================================= */ 
+          .ats-bottom-line { 
+            transform-origin: center; 
+            animation: ats-bottom-line 1.3s cubic-bezier(0.22, 1, 0.36, 1) 
+            forwards; animation-delay: 1.75s; } 
+            @keyframes ats-bottom-line { from { transform: scaleX(0); opacity: 0; } to { transform: scaleX(1); opacity: 1; } } 
+            /* ========================================================= IMAGE HOVER ========================================================= */
+             .ats-image-frame { 
+                transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), 
+                box-shadow 0.7s ease, border-color 0.7s ease; }
+             .ats-image-frame:hover { transform: translateY(-5px); 
+                border-color: rgba(212, 175, 55, 0.42); 
+                box-shadow: 0 40px 90px rgba(0, 0, 0, 0.50), 0 0 45px rgba(212, 175, 55, 0.25); } 
+
+/* =========================================================
+   BEGINNING OF ABOUT PAGE
+   OUR PHILOSOPHY — ANIMATION CSS
+========================================================= */
+
+
+/* =========================================================
+   SECTION REVEAL
+========================================================= */
+
+.aop {
+    opacity: 0;
+    transform: translateY(35px);
+
+    animation:
+        aop-section-reveal 1.2s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+
+    animation-timeline: view();
+    animation-range: entry 8% cover 35%;
+}
+
+@keyframes aop-section-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   AMBIENT GLOW — LEFT
+========================================================= */
+
+.aop-glow-left {
+    animation:
+        aop-glow-left 11s ease-in-out infinite alternate;
+}
+
+@keyframes aop-glow-left {
+
+    0% {
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+
+        opacity: 0.38;
+    }
+
+    50% {
+        transform:
+            translate3d(35px, -25px, 0)
+            scale(1.08);
+
+        opacity: 0.55;
+    }
+
+    100% {
+        transform:
+            translate3d(10px, 30px, 0)
+            scale(1.02);
+
+        opacity: 0.44;
+    }
+
+}
+
+
+/* =========================================================
+   AMBIENT GLOW — RIGHT
+========================================================= */
+
+.aop-glow-right {
+    animation:
+        aop-glow-right 13s ease-in-out infinite alternate;
+}
+
+@keyframes aop-glow-right {
+
+    0% {
+        transform:
+            translate3d(0, 0, 0)
+            scale(1);
+
+        opacity: 0.32;
+    }
+
+    50% {
+        transform:
+            translate3d(-35px, -20px, 0)
+            scale(1.10);
+
+        opacity: 0.48;
+    }
+
+    100% {
+        transform:
+            translate3d(-10px, 25px, 0)
+            scale(1.03);
+
+        opacity: 0.38;
+    }
+
+}
+
+
+/* =========================================================
+   BACKGROUND WATERMARK
+========================================================= */
+
+.aop-watermark {
+    animation:
+        aop-watermark-float 18s ease-in-out infinite alternate;
+}
+
+@keyframes aop-watermark-float {
+
+    0% {
+        transform:
+            translate3d(0, 0, 0);
+
+        opacity: 0.55;
+    }
+
+    50% {
+        transform:
+            translate3d(22px, -10px, 0);
+
+        opacity: 0.78;
+    }
+
+    100% {
+        transform:
+            translate3d(-14px, 8px, 0);
+
+        opacity: 0.62;
+    }
+
+}
+
+
+/* =========================================================
+   DECORATIVE SPARK — ONE
+========================================================= */
+
+.aop-spark-one {
+    animation:
+        aop-spark-one 4.8s ease-in-out infinite;
+}
+
+@keyframes aop-spark-one {
+
+    0%,
+    100% {
+        opacity: 0.18;
+
+        transform:
+            scale(0.75)
+            rotate(0deg);
+    }
+
+    45% {
+        opacity: 0.85;
+
+        transform:
+            scale(1.15)
+            rotate(14deg);
+    }
+
+    70% {
+        opacity: 0.40;
+
+        transform:
+            scale(0.92)
+            rotate(25deg);
+    }
+
+}
+
+
+/* =========================================================
+   DECORATIVE SPARK — TWO
+========================================================= */
+
+.aop-spark-two {
+    animation:
+        aop-spark-two 5.5s ease-in-out infinite;
+}
+
+@keyframes aop-spark-two {
+
+    0%,
+    100% {
+        opacity: 0.15;
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    50% {
+        opacity: 0.75;
+
+        transform:
+            translateY(-13px)
+            rotate(-18deg);
+    }
+
+}
+
+
+/* =========================================================
+   DECORATIVE SPARK — THREE
+========================================================= */
+
+.aop-spark-three {
+    animation:
+        aop-spark-three 6s ease-in-out infinite;
+}
+
+@keyframes aop-spark-three {
+
+    0%,
+    100% {
+        opacity: 0.15;
+
+        transform:
+            translateY(0)
+            scale(0.8);
+    }
+
+    50% {
+        opacity: 0.65;
+
+        transform:
+            translateY(-9px)
+            scale(1.1);
+    }
+
+}
+
+
+/* =========================================================
+   INTRO AREA REVEAL
+========================================================= */
+
+.aop-intro {
+    animation:
+        aop-intro-reveal 1.15s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+
+    animation-delay: 0.15s;
+}
+
+@keyframes aop-intro-reveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.aop-tag {
+    opacity: 0;
+
+    animation:
+        aop-tag-reveal 0.9s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+
+    animation-delay: 0.35s;
+}
+
+@keyframes aop-tag-reveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(12px);
+
+        letter-spacing: 5px;
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+        letter-spacing: 4px;
+    }
+
+}
+
+
+/* =========================================================
+   EYEBROW LINES
+========================================================= */
+
+.aop-tag::before,
+.aop-tag::after {
+    transform: scaleX(0);
+
+    animation:
+        aop-tag-lines 1s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+
+    animation-delay: 0.65s;
+}
+
+@keyframes aop-tag-lines {
+
+    from {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   MAIN TITLE REVEAL
+========================================================= */
+
+.aop-title {
+    opacity: 0;
+
+    animation:
+        aop-title-reveal 1.15s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+
+    animation-delay: 0.55s;
+}
+
+@keyframes aop-title-reveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(32px)
+            skewY(2deg);
+
+        filter: blur(4px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            skewY(0);
+
+        filter: blur(0);
+    }
+
+}
+
+
+/* =========================================================
+   GOLD TITLE SHIMMER
+========================================================= */
+
+.aop-title span {
+    background:
+        linear-gradient(
+            110deg,
+            #b58a2b 0%,
+            #d6b65c 35%,
+            #f1dc8c 50%,
+            #d6b65c 65%,
+            #b58a2b 100%
+        );
+
+    background-size: 220% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    animation:
+        aop-title-shine 6.5s ease-in-out infinite;
+}
+
+@keyframes aop-title-shine {
+
+    0%,
+    65% {
+        background-position: 0% center;
+    }
+
+    85%,
+    100% {
+        background-position: 100% center;
+    }
+
+}
+
+
+/* =========================================================
+   DESCRIPTION REVEAL
+========================================================= */
+
+.aop-description {
+    opacity: 0;
+
+    animation:
+        aop-description-reveal 1s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+
+    animation-delay: 0.82s;
+}
+
+@keyframes aop-description-reveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   DIVIDER REVEAL
+========================================================= */
+
+.aop-divider {
+    opacity: 0;
+
+    animation:
+        aop-divider-reveal 0.9s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+
+    animation-delay: 1.05s;
+}
+
+@keyframes aop-divider-reveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   DIVIDER LINES
+========================================================= */
+
+.aop-divider-line {
+    transform-origin: center;
+
+    animation:
+        aop-divider-line 1.1s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+
+    animation-delay: 1.2s;
+}
+
+@keyframes aop-divider-line {
+
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+
+}
+
+
+/* =========================================================
+   DIVIDER SYMBOL
+========================================================= */
+
+.aop-divider-symbol {
+    animation:
+        aop-divider-symbol 4s ease-in-out infinite;
+}
+
+@keyframes aop-divider-symbol {
+
+    0%,
+    100% {
+        opacity: 0.45;
+
+        transform:
+            rotate(45deg)
+            scale(0.85);
+    }
+
+    50% {
+        opacity: 0.90;
+
+        transform:
+            rotate(135deg)
+            scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   PHILOSOPHY GRID REVEAL
+========================================================= */
+
+.aop-grid {
+    opacity: 0;
+
+    animation:
+        aop-grid-reveal 1s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+
+    animation-delay: 1.15s;
+}
+
+@keyframes aop-grid-reveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   CARD ONE REVEAL
+========================================================= */
+
+.aop-card-one {
+    animation:
+        aop-card-one-reveal 1s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+
+    animation-delay: 1.25s;
+}
+
+@keyframes aop-card-one-reveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   CARD TWO REVEAL
+========================================================= */
+
+.aop-card-two {
+    animation:
+        aop-card-two-reveal 1s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+
+    animation-delay: 1.42s;
+}
+
+@keyframes aop-card-two-reveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(55px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(22px);
+    }
+
+}
+
+
+/* =========================================================
+   CARD THREE REVEAL
+========================================================= */
+
+.aop-card-three {
+    animation:
+        aop-card-three-reveal 1s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        both;
+
+    animation-delay: 1.59s;
+}
+
+@keyframes aop-card-three-reveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(75px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(44px);
+    }
+
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.aop-card-number {
+    transition:
+        color 0.45s ease,
+        text-shadow 0.45s ease;
+}
+
+.aop-card:hover .aop-card-number {
+    color:
+        rgba(214, 182, 92, 0.85);
+
+    text-shadow:
+        0 0 18px rgba(212, 175, 55, 0.18);
+}
+
+
+/* =========================================================
+   CARD ICON
+========================================================= */
+
+.aop-card-icon {
+    animation:
+        aop-icon-breathe 5s ease-in-out infinite;
+}
+
+@keyframes aop-icon-breathe {
+
+    0%,
+    100% {
+        opacity: 0.55;
+    }
+
+    50% {
+        opacity: 0.95;
+    }
+
+}
+
+
+/* =========================================================
+   CARD TAG
+========================================================= */
+
+.aop-card-tag {
+    transition:
+        color 0.4s ease,
+        letter-spacing 0.4s ease;
+}
+
+.aop-card:hover .aop-card-tag {
+    color:
+        rgba(214, 182, 92, 0.82);
+
+    letter-spacing: 3.5px;
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.aop-card-title span {
+    transition:
+        text-shadow 0.5s ease,
+        letter-spacing 0.5s ease;
+}
+
+.aop-card:hover .aop-card-title span {
+    text-shadow:
+        0 0 20px rgba(212, 175, 55, 0.15);
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.aop-card-text {
+    transition:
+        color 0.45s ease,
+        transform 0.45s ease;
+}
+
+.aop-card:hover .aop-card-text {
+    color:
+        rgba(220, 224, 215, 0.74);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   CARD ACCENT
+========================================================= */
+
+.aop-card-accent {
+    transform-origin: left center;
+
+    animation:
+        aop-card-accent 1.2s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+
+    animation-delay: 1.8s;
+}
+
+@keyframes aop-card-accent {
+
+    from {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   CLOSING STATEMENT
+========================================================= */
+
+.aop-closing {
+    opacity: 0;
+
+    animation:
+        aop-closing-reveal 1s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+
+    animation-delay: 1.8s;
+}
+
+@keyframes aop-closing-reveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   CLOSING LINES
+========================================================= */
+
+.aop-closing-line {
+    transform-origin: center;
+
+    animation:
+        aop-closing-line 1.2s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        forwards;
+
+    animation-delay: 2s;
+}
+
+@keyframes aop-closing-line {
+
+    from {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   CLOSING TEXT
+========================================================= */
+
+.aop-closing p {
+    transition:
+        color 0.5s ease,
+        letter-spacing 0.5s ease;
+}
+
+.aop-closing:hover p {
+    color:
+        rgba(225, 199, 112, 0.82);
+
+    letter-spacing: 0.7px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .aop,
+    .aop-intro,
+    .aop-tag,
+    .aop-title,
+    .aop-description,
+    .aop-divider,
+    .aop-grid,
+    .aop-card-one,
+    .aop-card-two,
+    .aop-card-three,
+    .aop-closing,
+    .aop-card-accent {
+
+        animation: none !important;
+
+        opacity: 1 !important;
+
+        transform: none !important;
+
+        filter: none !important;
+    }
+
+    .aop-glow-left,
+    .aop-glow-right,
+    .aop-watermark,
+    .aop-spark-one,
+    .aop-spark-two,
+    .aop-spark-three,
+    .aop-divider-symbol,
+    .aop-card-icon,
+    .aop-title span {
+
+        animation: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   END OF ABOUT PAGE
+   OUR PHILOSOPHY — ANIMATION CSS
+========================================================= */
+/* =========================================================
+   OUR CRAFTSMANSHIP — ANIMATIONS
+========================================================= */
+
+@keyframes ac-reveal {
+    from {
+        opacity: 0.35;
+        transform: translateY(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ac-image-reveal {
+    from {
+        opacity: 0.65;
+        clip-path: inset(8% 5% 8% 5%);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes ac-image-settle {
+    from {
+        transform: scale(1.04);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes ac-caption-reveal {
+    from {
+        opacity: 0;
+        transform: translateX(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scroll-based reveals, when supported */
+
+@supports (animation-timeline: view()) {
+    .ac-image {
+        animation: ac-image-reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 35%;
+    }
+
+    .ac-image img {
+        animation: ac-image-settle linear both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 45%;
+    }
+
+    .ac-content > * {
+        animation: ac-reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 8% cover 32%;
+    }
+
+    .ac-content > .ac-eyebrow {
+        animation-delay: 0ms;
+    }
+
+    .ac-content > .ac-title {
+        animation-delay: 80ms;
+    }
+
+    .ac-content > .ac-description {
+        animation-delay: 140ms;
+    }
+
+    .ac-content > .ac-values {
+        animation-delay: 200ms;
+    }
+
+    .ac-content > .ac-link {
+        animation-delay: 260ms;
+    }
+
+    .ac-image-caption {
+        animation: ac-caption-reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 15% cover 35%;
+    }
+}
+
+/* Subtle image treatment on hover */
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .ac-image img {
+        transition: filter 0.6s ease;
+    }
+
+    .ac-image:hover img {
+        filter: saturate(1) contrast(1.04);
+    }
+
+    .ac-value {
+        transition: border-color 0.35s ease;
+    }
+
+    .ac-value:hover {
+        border-bottom-color: rgba(214, 182, 92, 0.42);
+    }
+
+    .ac-value-number {
+        transition: color 0.35s ease;
+    }
+
+    .ac-value:hover .ac-value-number {
+        color: #d6b65c;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .ac-image,
+    .ac-image img,
+    .ac-image-caption,
+    .ac-content > *,
+    .ac-value,
+    .ac-value-number {
+        animation: none !important;
+        transition: none !important;
+        clip-path: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+/* =========================================================
+   MATERIALS & CARE — ANIMATIONS
+========================================================= */
+
+@keyframes amc-reveal {
+    from {
+        opacity: 0.35;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes amc-rule-reveal {
+    from {
+        opacity: 0;
+        transform: scaleX(0.65);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@supports (animation-timeline: view()) {
+    .amc-heading,
+    .amc-material,
+    .amc-care-label,
+    .amc-care-title,
+    .amc-care-list,
+    .amc-link,
+    .amc-note {
+        animation: amc-reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 30%;
+    }
+
+    .amc-material {
+        animation-range: entry 8% cover 28%;
+    }
+
+    .amc-care-list {
+        animation-range: entry 10% cover 32%;
+    }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .amc-material {
+        transition: border-color 0.35s ease;
+    }
+
+    .amc-material:hover {
+        border-color: rgba(214, 182, 92, 0.4);
+    }
+
+    .amc-material-number {
+        transition: color 0.35s ease;
+    }
+
+    .amc-material:hover .amc-material-number {
+        color: #f1dc8c;
+    }
+
+    .amc-care-icon {
+        transition: transform 0.35s ease;
+    }
+
+    .amc-care-list li:hover .amc-care-icon {
+        transform: translateX(3px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .amc-heading,
+    .amc-material,
+    .amc-care-label,
+    .amc-care-title,
+    .amc-care-list,
+    .amc-link,
+    .amc-note,
+    .amc-material-number,
+    .amc-care-icon {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+/* =========================================================
+   THE TRISHINE PROMISE — ANIMATIONS
+========================================================= */
+
+@keyframes atp-reveal {
+    from {
+        opacity: 0.35;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes atp-ornament-reveal {
+    from {
+        opacity: 0;
+        transform: scaleX(0.6);
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+/* Scroll reveals are an enhancement; content remains visible by default. */
+@supports (animation-timeline: view()) {
+    .atp-ornament,
+    .atp-eyebrow,
+    .atp-title,
+    .atp-intro,
+    .atp-values,
+    .atp-closing {
+        animation: atp-reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 30%;
+    }
+
+    .atp-ornament {
+        animation-name: atp-ornament-reveal;
+        animation-range: entry 5% cover 25%;
+    }
+
+    .atp-values {
+        animation-range: entry 8% cover 32%;
+    }
+
+    .atp-closing {
+        animation-range: entry 12% cover 35%;
+    }
+}
+
+/* Subtle interaction on the promise markers */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .atp-value-mark {
+        transition:
+            color 0.35s ease,
+            border-color 0.35s ease,
+            background-color 0.35s ease,
+            transform 0.35s ease;
+    }
+
+    .atp-value:hover .atp-value-mark {
+        transform: translateY(-3px);
+        border-color: #a88236;
+        background-color: rgba(168, 130, 54, 0.08);
+        color: #a88236;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .atp-ornament,
+    .atp-eyebrow,
+    .atp-title,
+    .atp-intro,
+    .atp-values,
+    .atp-closing,
+    .atp-value-mark {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+/* =========================================================
+   CONTACT FORM — ANIMATIONS
+========================================================= */
+
+@keyframes cf-reveal-left {
+    from {
+        opacity: 0.4;
+        transform: translateX(-22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes cf-reveal-right {
+    from {
+        opacity: 0.4;
+        transform: translateX(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes cf-ring-turn {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+/* Scroll reveals are an enhancement; content remains visible by default. */
+@supports (animation-timeline: view()) {
+    .cf-intro {
+        animation: cf-reveal-left linear both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 32%;
+    }
+
+    .cf-form-panel {
+        animation: cf-reveal-right linear both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 32%;
+    }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .cf-decoration-ring {
+        transition: border-color 0.5s ease;
+    }
+
+    .cf-intro:hover .cf-decoration-ring {
+        border-color: rgba(214, 182, 92, 0.38);
+        animation: cf-ring-turn 1.2s ease forwards;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cf-intro,
+    .cf-form-panel,
+    .cf-decoration-ring {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* =========================================================
+   VISIT OUR STORE — ANIMATIONS
+========================================================= */
+
+@keyframes vs-reveal {
+    from {
+        opacity: 0.35;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes vs-pin-pulse {
+    0%,
+    100% {
+        box-shadow:
+            0 0 0 8px rgba(214, 182, 92, 0.07),
+            0 0 24px rgba(214, 182, 92, 0.14);
+    }
+
+    50% {
+        box-shadow:
+            0 0 0 13px rgba(214, 182, 92, 0.035),
+            0 0 34px rgba(214, 182, 92, 0.22);
+    }
+}
+
+/* Scroll reveals are an enhancement; content remains visible by default. */
+@supports (animation-timeline: view()) {
+    .vs-heading,
+    .vs-details,
+    .vs-map-card {
+        animation: vs-reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 32%;
+    }
+
+    .vs-details {
+        animation-range: entry 8% cover 34%;
+    }
+
+    .vs-map-card {
+        animation-range: entry 10% cover 36%;
+    }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .vs-map-pin {
+        animation: vs-pin-pulse 3.2s ease-in-out infinite;
+    }
+
+    .vs-icon {
+        transition:
+            color 0.3s ease,
+            border-color 0.3s ease,
+            transform 0.3s ease;
+    }
+
+    .vs-detail:hover .vs-icon {
+        transform: translateY(-2px);
+        border-color: rgba(214, 182, 92, 0.75);
+        color: #f1dc8c;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .vs-heading,
+    .vs-details,
+    .vs-map-card,
+    .vs-map-pin,
+    .vs-icon,
+    .vs-directions {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* =========================================================
+   CONTACT PAGE — QUICK ANSWERS ANIMATIONS
+========================================================= */
+
+@keyframes cqa-reveal {
+    from {
+        opacity: 0.4;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll reveals are an enhancement; content stays visible by default. */
+@supports (animation-timeline: view()) {
+    .cqa-heading,
+    .cqa-list,
+    .cqa-footer {
+        animation: cqa-reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 32%;
+    }
+
+    .cqa-list {
+        animation-range: entry 8% cover 35%;
+    }
+
+    .cqa-footer {
+        animation-range: entry 12% cover 38%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cqa-heading,
+    .cqa-list,
+    .cqa-footer {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
